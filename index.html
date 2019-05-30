@@ -375,33 +375,27 @@
       
         
           
-            <p>记录一下如何新建-编写-生成-部署博客的全过程</p>
-<h3 id="1、使用cmd完成"><a href="#1、使用cmd完成" class="headerlink" title="1、使用cmd完成"></a>1、使用cmd完成</h3><ol>
-<li><p>打开命令提示符[win+r输入cmd]</p>
-</li>
-<li><p>切换到自己本地blog目录</p>
-</li>
-<li><p>创建md文件，以供后面的文章编写</p>
-</li>
-<li><p>创建好的文件在D:\Blog\source_posts下，打开后即可进行编辑</p>
-</li>
-<li><p>编辑完成后进行对文章的页面生成及部署</p>
-</li>
-<li><p>成功访问</p>
-</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1.打开命令提示符cmd</span></span><br><span class="line">win+r :cmd</span><br><span class="line"><span class="meta">#</span><span class="bash">2.切换到本地目录</span></span><br><span class="line">d:</span><br><span class="line">cd Blog</span><br><span class="line"><span class="meta">#</span><span class="bash">3.创建可编辑的文件</span></span><br><span class="line">hexo new post "blog-name"</span><br><span class="line"><span class="meta">#</span><span class="bash">4.进入到文件所在目录双击编辑</span></span><br><span class="line"><span class="meta">#</span><span class="bash">5.对文章进行生成部署</span></span><br><span class="line">hexo d -g</span><br><span class="line"><span class="meta">#</span><span class="bash">5.1.需要的扩展：</span></span><br><span class="line">npm install hexo-deployer-git</span><br><span class="line"><span class="meta">#</span><span class="bash">6.访问</span></span><br><span class="line">https://zsy0216.github.io/article.github.io/</span><br></pre></td></tr></table></figure>
+          记录一下如何新建-编写-生成-部署博客的全过程
+1、使用cmd完成
+打开命令提示符[win+r输入cmd]
 
-<h3 id="2-在git-bash下完成"><a href="#2-在git-bash下完成" class="headerlink" title="2.在git bash下完成"></a>2.在git bash下完成</h3><ol>
-<li>编辑文章同上</li>
-<li>发布时进入文章所在目录</li>
-<li>生成与部署</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1.</span></span><br><span class="line">win+r :cmd</span><br><span class="line">d:</span><br><span class="line">cd Blog</span><br><span class="line">hexo new post "blog-name"</span><br><span class="line"><span class="meta">#</span><span class="bash">1.1.进入到文件所在目录双击编辑</span></span><br><span class="line"><span class="meta">#</span><span class="bash">2.进入文章所在目录鼠标右键选择git bash here</span></span><br><span class="line"><span class="meta">#</span><span class="bash">3.生成部署</span></span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+切换到自己本地blog目录
 
-<p>### </p>
+创建md文件，以供后面的文章编写
 
-          
+创建好的文件在D:\Blog\source_posts下，打开后即可进行编辑
+
+编辑完成后进行对文章的页面生成及部署
+
+成功
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/article.github.io/2019/05/30/start-my-blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -519,48 +513,21 @@
       
         
           
-            <h3 id="鲁迅"><a href="#鲁迅" class="headerlink" title="鲁迅"></a>鲁迅</h3><ul>
-<li>当我沉默的时候，我觉得很充实，当我开口说话，就感到了空虚。</li>
-<li>从来如此，便对么？</li>
-<li>哀其不幸，怒其不争。</li>
-<li>其实地上本没有路，走的人多了，也便成了路。</li>
-<li>贪安稳就没有自由，要自由就要历些危险。只有这两条路。</li>
-<li>中国人的性情是总喜欢调和折中的，譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如果你主张拆掉屋顶他们就来调和，愿意开窗了。</li>
-<li>猛兽总是独行，牛羊才成群结队。</li>
-</ul>
-<h3 id="王小波"><a href="#王小波" class="headerlink" title="王小波"></a>王小波</h3><ul>
-<li>假设有一个领悟，谦虚的人、明理的人以为它太困难、太暧昧，不肯说话，那么开口说话的就必然是浅薄之徒，狂妄之辈。这导致一种负筛选：越是傻子越敢叫唤——马上我就要说到，这些傻子也不见得真的傻，但喊出来的都是假话。</li>
-<li>人生唯一的不幸就是自己的无能。</li>
-<li>当你一步步回溯一件过去的事时，当然会知道下一步会发生什么。但是假如你在一步步经历意见当前逾期的事，你就会对未来一无所知。</li>
-<li></li>
-</ul>
-<h3 id="老舍"><a href="#老舍" class="headerlink" title="老舍"></a>老舍</h3><ul>
-<li>明天只是今天的继续，明天承继着今天的委屈。</li>
-<li>苦人的懒是努力而落了空的自然结果，苦人的耍刺儿含着一些公理。</li>
-<li>自己的路既走不通，便没法不承认别人做得对。</li>
-<li>人间的真话本来就不多，一个女子的脸红胜过一大片话。</li>
-<li>悲哀中的礼貌是虚伪。</li>
-<li>其实，雨并不公道，因为下落在一个没有公道的世界上。</li>
-<li></li>
-</ul>
-<h3 id="胡适"><a href="#胡适" class="headerlink" title="胡适"></a>胡适</h3><ul>
-<li>成功不必在我，而功力必不唐捐。</li>
-<li>生活的”为什么“，就是生活的意思。</li>
-<li>生活本没有意义，你要能给他什么意义，他就有什么意义。逾期终日冥想人生有何意义，不如试用此生做点有意义的事。</li>
-<li></li>
-</ul>
-<ol>
-<li>你剥夺了我的理智，却要我清醒的去思考。  ——《高老头》</li>
-<li>狐狸用尾巴扫干净蘑菇上的灰尘，刺猬们也把肚子露了出来，蜗牛也害羞地钻进自己的壳里，长颈鹿不停地吃掉颜色不好的叶子，因为你到我的森林里来了。</li>
-<li>不乱于心，不困于情，不畏将来，不念过往，如此，安好。无愧于天，无愧于地，无怍于人，无惧于鬼，这样，人生。  ——丰子恺</li>
-<li>如果有来生，要做一棵树，站成永恒。没有悲欢的姿势，一半在尘土里安详，一半在风中飞扬；一半洒落荫凉，一半沐浴阳光。  ——三毛</li>
-<li>只缘感君一回顾，使我思君朝与暮。</li>
-<li>我将于茫茫人海寻找我唯一之灵魂伴侣，得之，我幸，不得，我命。</li>
-<li>寒山云：世人谤我、欺我、辱我、笑我、轻我、贱我、恶我、骗我、如何处置乎？拾得云：只是忍他、让他、由他、避他、耐他、敬他、不要理他、再待几年你且看他。</li>
-<li>友谊悖论：你总是觉得，自己的朋友比自己有更多的朋友。</li>
-</ol>
-
-          
+          鲁迅
+当我沉默的时候，我觉得很充实，当我开口说话，就感到了空虚。
+从来如此，便对么？
+哀其不幸，怒其不争。
+其实地上本没有路，走的人多了，也便成了路。
+贪安稳就没有自由，要自由就要历些危险。只有这两条路。
+中国人的性情是总喜欢调和折中的，譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/article.github.io/2019/05/30/言论/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -678,21 +645,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/article.github.io/2019/05/30/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
