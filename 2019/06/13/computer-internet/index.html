@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="期末复习,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="计算机网络前言：题型解析   题型 题数 分值占比    选择题 16 24   填空题 10 10   名词解释 10 10   简答题 3 24   计算题 2 22   应用题 1 10   第一章 概述部分 三网：电信网络、有线电视网络、计算机网络 p1  互联网的两个基本特点：连通性和共享 p2  所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3  ARPANET：I">
+<meta name="keywords" content="期末复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="computer-internet">
+<meta property="og:url" content="http://yoursite.com/2019/06/13/computer-internet/index.html">
+<meta property="og:site_name" content="Tassel">
+<meta property="og:description" content="计算机网络前言：题型解析   题型 题数 分值占比    选择题 16 24   填空题 10 10   名词解释 10 10   简答题 3 24   计算题 2 22   应用题 1 10   第一章 概述部分 三网：电信网络、有线电视网络、计算机网络 p1  互联网的两个基本特点：连通性和共享 p2  所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3  ARPANET：I">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="https://zsy.xyz/images/computer-networks/MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="https://zsy.xyz/images/computer-networks/UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="https://zsy.xyz/images/computer-networks/TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:updated_time" content="2019-06-13T02:22:12.885Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="computer-internet">
+<meta name="twitter:description" content="计算机网络前言：题型解析   题型 题数 分值占比    选择题 16 24   填空题 10 10   名词解释 10 10   简答题 3 24   计算题 2 22   应用题 1 10   第一章 概述部分 三网：电信网络、有线电视网络、计算机网络 p1  互联网的两个基本特点：连通性和共享 p2  所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3  ARPANET：I">
+<meta name="twitter:image" content="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/13/computer-internet/">
+
+
+
+
+
+  <title>computer-internet | Tassel</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tassel</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/13/computer-internet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tassel">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tassel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">computer-internet</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-13T10:17:46+08:00">
+                2019-06-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Review/" itemprop="url" rel="index">
+                    <span itemprop="name">Review</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/06/13/computer-internet/" class="leancloud_visitors" data-flag-title="computer-internet">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.4k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="前言：题型解析"><a href="#前言：题型解析" class="headerlink" title="前言：题型解析"></a>前言：题型解析</h2><table>
+<thead>
+<tr>
+<th>题型</th>
+<th>题数</th>
+<th>分值占比</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>选择题</td>
+<td>16</td>
+<td>24</td>
+</tr>
+<tr>
+<td>填空题</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>名词解释</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>简答题</td>
+<td>3</td>
+<td>24</td>
+</tr>
+<tr>
+<td>计算题</td>
+<td>2</td>
+<td>22</td>
+</tr>
+<tr>
+<td>应用题</td>
+<td>1</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<h2 id="第一章-概述部分"><a href="#第一章-概述部分" class="headerlink" title="第一章 概述部分"></a>第一章 概述部分</h2><ol>
+<li><p>三网：电信网络、有线电视网络、计算机网络 p1</p>
+</li>
+<li><p>互联网的两个基本特点：连通性和共享 p2</p>
+</li>
+<li><p>所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3</p>
+</li>
+<li><p>ARPANET：Internet的前身，美国。p5</p>
+</li>
+<li><p>ISP：（Internet Service Provider）互联网服务提供者。 p6</p>
+</li>
+<li><p>RFC：（Request For Comments）互联网标准发布的文档形式。 p9</p>
+</li>
+<li><p>互联网的组成：边缘部分、核心部分。 p10 小题</p>
+</li>
+<li><p>通信方式(边缘部分)：客户-服务器方式（C/S方式）、对等方式（P2P方式）。 p11</p>
+</li>
+<li><p>交换技术(核心部分)：电路交换、报文交换、分组交换 p17 小题</p>
+</li>
+<li><p>计算机网络的性能指标：速率、带宽、吞吐量、时延 p21</p>
+</li>
+<li><p>带宽：单位，比特每秒（bit/s） p21</p>
+</li>
+<li><p>时延： p22</p>
+<ul>
+<li>发送时延：</li>
+</ul>
+<p>$$<br>发送时延=数据帧长度（bit）/发送速率（bit/s）<br>$$</p>
+<ul>
+<li>传播时延：</li>
+</ul>
+<p>$$<br>传播时延=信道长度（m）/电磁波在信道上的传播速率（m/s）<br>$$</p>
+</li>
+</ol>
+<pre><code>- 处理时延：主机或路由器在收到分组时的处理时间
+- 排队时延：分组在经过网络传输时，进图路由器后在队列中的排队时间
+- 总时延：
+
+$$
+总时延=发送时延+传播时延+处理时延+排队时延
+$$</code></pre><ol start="13">
+<li><p>OSI/RM：（Open System Interconnection Reference Model）开放系统互连基本参考模型 p27</p>
+</li>
+<li><p>协议：p29 简答，填空</p>
+<ul>
+<li>三要素：语法、语义、同步 </li>
+</ul>
+</li>
+<li><p>OSI和TCP/IP的体系结构 p31</p>
+</li>
+</ol>
+<p><img src="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="计算机网络体系结构"></p>
+<ol start="16">
+<li><p>PDU：（Protocol Data Unit）协议数据单元，指对等层次之间传送的数据单位。  p33</p>
+</li>
+<li><p>各层对应数据单元名称：p31</p>
+<ul>
+<li>应用层：报文/数据/消息</li>
+<li>运输层：报文段</li>
+<li>网络层：分组/数据报</li>
+<li>数据链路层：帧</li>
+<li>物理层：比特</li>
+</ul>
+</li>
+<li><p>协议和服务的区别与联系  p34</p>
+<ul>
+<li><p>区别：协议是控制两个对等实体（或多个实体）进行通信的规则的集合，是水平的。</p>
+<pre><code>服务是下层通过层间接口向上层提供的功能，是垂直的。</code></pre></li>
+<li><p>联系：协议的实现保证了能够向上一层提供服务，要实现本层协议还需使用下层提供的服务。</p>
+</li>
+</ul>
+</li>
+<li></li>
+</ol>
+<h2 id="第二章-物理层"><a href="#第二章-物理层" class="headerlink" title="第二章 物理层"></a>第二章 物理层</h2><ol>
+<li><p>特性：机械特性、电气特性、功能特性、过程特性   p41</p>
+</li>
+<li><p>信号：模拟信号、数字信号。  p43 小题</p>
+</li>
+<li><p>通信方式：单工通信、半双工通信、全双工通信。  p43</p>
+</li>
+<li><p>信道的极限容量：  p45</p>
+<ul>
+<li><p>奈氏准则：在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的码间串扰的问题，使接收端对码元的判决（即识别）成为不可能。</p>
+</li>
+<li><p>香农公式：信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。</p>
+<p>​        C=W log<sub>2</sub>(1+S/N)（bit/s）</p>
+<p>C：信道的极限信息传输速率</p>
+<p>W：信道的带宽（以Hz为单位）</p>
+<p>S：信道内所传信号的平均功率</p>
+<p>N：信道内部的高斯噪声功率</p>
+</li>
+</ul>
+</li>
+<li><p>传输介质：p47</p>
+<ul>
+<li>双绞线：p47<ul>
+<li>STP：屏蔽双绞线</li>
+<li>UTP：非屏蔽双绞线</li>
+</ul>
+</li>
+<li>同轴电缆：p48</li>
+<li>光缆：单模光纤、多模光纤  p49</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>传输质量</th>
+<th>传输距离</th>
+<th>价格</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多模光纤</td>
+<td>低</td>
+<td>近</td>
+<td>便宜</td>
+<td>橙</td>
+</tr>
+<tr>
+<td>单模光纤</td>
+<td>高</td>
+<td>远</td>
+<td>贵</td>
+<td>黄</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>ISM：Industrial、Scientific、Medical(工业、科学、医药)，即所谓的工、科、医频段。  p53</p>
+</li>
+<li><p>信道复用技术：p53</p>
+<ul>
+<li>FDM：频分复用</li>
+<li>TDM：时分复用</li>
+<li>WDM：波分复用</li>
+<li>CDM：码分复用</li>
+</ul>
+</li>
+<li><p>多路复用的速率体系：北美和日本的T1速率（1.544Mbit/s），欧洲的E1速率（2.048Mbit/s）互不兼容  p59</p>
+</li>
+<li><p>宽带接入技术：p60</p>
+<ul>
+<li>ADSL技术：非对称数字用户线</li>
+<li>HFC网：光纤同轴混合网</li>
+<li>FTTx技术：光纤到x</li>
+</ul>
+</li>
+<li></li>
+</ol>
+<h2 id="第三章-数据链路层"><a href="#第三章-数据链路层" class="headerlink" title="第三章 数据链路层"></a>第三章 数据链路层</h2><ol>
+<li><p>信道类型：点对点信道，广播信道。  p69</p>
+</li>
+<li><p>三个基本问题：封装成帧，透明传输，差错检测。  p71</p>
+</li>
+<li><p>CRC：循环冗余检验。  p74</p>
+</li>
+<li><p>差错处理：检错（CRC），纠错（海明码）.  p75</p>
+</li>
+<li><p>PPP：point-to-point protocol . 点对点协议。  p76</p>
+</li>
+<li><p>PPP的组成： p78</p>
+<ul>
+<li>一个将IP数据报封装到串行链路的方法。</li>
+<li>一个用来建立、配置和测试数据链路连接的链路控制协议LCP。</li>
+<li>一套网络控制协议NCP。</li>
+</ul>
+</li>
+<li><p>零比特填充：如何填/删？ p80</p>
+<p>​    在发送端，先扫描整个信息字段（通常用硬件实现，但也可用软件实现，只是会慢些）。只要发现5个联系1，则立即填入一个0.因此经过这种零比特填充的数据，就可以保证在信息字段中不会出现6个联系1。</p>
+<p>​    接收端在收到一个帧时，先找到标志字段F以确定一个帧的边界，接着再用硬件对其中的比特流进行扫描。每当发现5个连续1时，就把这5个连续1后的一个0删除，以还原成原来的信息比特流。这样就保证了透明传输：在所传送的数据比特流中可以传送任意组合的比特流，而不会引起对帧边界的错误判断。</p>
+</li>
+<li><p>拓扑类型：星形网，环形网，总线网。  p82</p>
+</li>
+<li><p>CSMA/CD：以太网协议。  p85</p>
+</li>
+<li><p>以太网帧：p96. p97.</p>
+<ul>
+<li>MAC帧格式：</li>
+</ul>
+<p><img src="https://zsy.xyz/images/computer-networks/MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png" alt="MAC帧格式"></p>
+<ul>
+<li>帧尾(FCS)作用：校验</li>
+<li>前同步码（前导码）作用：实现位同步</li>
+</ul>
+</li>
+<li><p>STP：生成树协议   p101</p>
+<p>作用：防止链路层环路</p>
+</li>
+<li><p>VLAN：虚拟局域网。   p101</p>
+<p>作用：限制了接收广播信息的计算机数，使得网络不会因传播过多的广播信息（即所谓的“广播风暴”）而引起性能恶化。</p>
+</li>
+<li></li>
+</ol>
+<h2 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h2><ol>
+<li><p>中间设备：  p116</p>
+<ul>
+<li>物理层使用的中间设备叫做转发器。升级版为集线器</li>
+<li>数据链路层：网桥或桥接器。（交换机）</li>
+<li>网络层：路由器</li>
+<li>网络层以上：网关</li>
+</ul>
+</li>
+<li><p>IP地址：p119</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>网络号</th>
+<th>主机号</th>
+<th>最大网络数</th>
+<th>IP地址范围</th>
+<th>单个网段最大主机数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>8</td>
+<td>24</td>
+<td>126(2<sup>7</sup>-2)</td>
+<td>1.0.0.1-127.255.255.254</td>
+<td>16777214</td>
+</tr>
+<tr>
+<td>B</td>
+<td>16</td>
+<td>16</td>
+<td>16384(2<sup>14</sup>)</td>
+<td>128.0.0.0-191.255.255.255</td>
+<td>65534</td>
+</tr>
+<tr>
+<td>C</td>
+<td>24</td>
+<td>8</td>
+<td>2097152(2<sup>21</sup>)</td>
+<td>192.0.0.0-223.255.255.255</td>
+<td>254</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>IP地址</strong> 简答题：p119???</p>
+<ul>
+<li>IP地址是否合法？</li>
+<li>广播地址？网络号？主机地址？</li>
+</ul>
+</li>
+<li><p>ARP：地址解析协议  p124</p>
+<p>作用：地址映射。通过IP地址找出其对应的硬件地址。</p>
+</li>
+<li><p>IP数据报的格式：  p128</p>
+<p>生存时间字段：防止分组在网络中无限循环。</p>
+</li>
+<li><p>子网掩码：  p137</p>
+<ul>
+<li><p>默认子网掩码：</p>
+<ul>
+<li>A类：255.0.0.0</li>
+<li>B类：255.255.0.0</li>
+<li>C类：255.255.255.0</li>
+</ul>
+</li>
+<li><p>问题：前缀为/32，包含多少IP，多少主机IP</p>
+<p>IP数：2<sup>32-30</sup> = 2<sup>2 </sup> = 4个</p>
+<p>​    IP地址位数为32位，除去前缀还有2位，可分配2的平方个IP</p>
+<p>主机数：4 - 2 = 2 个</p>
+<p>​    IP地址中全0和全1为特殊地址，全0表示本主机，全1表示该网络上的所有主机</p>
+</li>
+</ul>
+</li>
+<li><p>VLSM：变长子网掩码。 p142</p>
+</li>
+<li><p>CIDR：无分类域间路由选择。  p142</p>
+</li>
+<li><p>ICMP：网际控制报文协议。  p149</p>
+<ul>
+<li>PING：<ul>
+<li>作用：用来测试两台主机之间的连通性</li>
+<li>原理：</li>
+</ul>
+</li>
+<li>traceroute：<ul>
+<li>作用：跟踪一个分组从源点到终点的路径。</li>
+<li>原理：TTL，生存时间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>路由协议： p152</p>
+<ul>
+<li>分类：???</li>
+</ul>
+</li>
+<li><p>内部网关协议RIP与OSPF对比：  p153???</p>
+</li>
+</ol>
+<ol start="12">
+<li>RIP的特点： p154<ol>
+<li>仅和相邻路由器交换信息</li>
+<li>路由器交换的信息是当前本路由器所知道的全部信息，即自己现在的路由表</li>
+<li>按固定的时间间隔交换路由信息</li>
+</ol>
+</li>
+<li>IPV6：地址长度128比特   p171</li>
+<li>私有（专有）地址范围：  p185</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A类</td>
+<td>10.0.0.0-10.255.255.255（或10.0.0.0/8，又称为24位块）</td>
+</tr>
+<tr>
+<td>B类</td>
+<td>172.16.0.0~172.31.255.255（或172.16.0.0/12，又称为20位块）</td>
+</tr>
+<tr>
+<td>C类</td>
+<td>192.168.0.0~192.168.255.255（或192.168.0.0/16，又称为16位块）</td>
+</tr>
+</tbody></table>
+<ol start="15">
+<li><p>NAT：网络地址转换。  p187</p>
+<p>DHCP：动态主机配置协议，分配ip。</p>
+<p>NAT和DHCP：家用路由器，应用题</p>
+</li>
+<li><p>课后题：p197 199</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>4-20</strong>  设某路由器建立了如下路由表</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>子网掩码</th>
+<th>下一跳</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>128.96.39.0</td>
+<td>255.255.255.128</td>
+<td>接口m0</td>
+</tr>
+<tr>
+<td>128.96.39.128</td>
+<td>255.255.255.128</td>
+<td>接口m1</td>
+</tr>
+<tr>
+<td>128.96.40.0</td>
+<td>255.255.255.128</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>128.4.153.0</td>
+<td>255.255.255.192</td>
+<td>R3</td>
+</tr>
+<tr>
+<td>* （默认）</td>
+<td>-</td>
+<td>R4</td>
+</tr>
+</tbody></table>
+<p>现共收到5个分组，其目的地址分别为：</p>
+<p>（1）128.96.39.0</p>
+<p>（2）128.96.40.12    </p>
+<p>（3）128.96.40.151</p>
+<p>（4）192.4.153.17</p>
+<p>（5）192.4.153.90</p>
+<p>试分别计算其下一跳</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">解：用目的IP地址和路由表中的子网掩码相与，若结果出现在路由表中的目的网络中，则转发相应的下一跳，若没有出现在路由表中的目的网络中，则转发到默认站R4.(1与1相与为1,1与0,0与1,0与0都为0)</span><br><span class="line">十进制转化二进制：除二取余，逆序排列</span><br><span class="line">二进制转化十进制：补齐位数，0或1乘以2的0次方，1次方。。。相加</span><br><span class="line">（1）</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>​    <strong>4-37</strong>  某单位分配到一个地址块136.23.12.64/26.现在需要进一步划分为4个一样大的字网。试问：</p>
+<p>（1）每个子网的网络前缀有多长？</p>
+<p>（2）每一个子网中有多少个地址？</p>
+<p>（3）每一个子网的地址块是什么？</p>
+<p>（4）每一个子网可分配给主机使用的最小地址和最大地址是什么？</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(1)原来网络前缀是26位，需要再增加2位，才能划分4个一样大的子网。因此每个子网的网络前缀是28位</span><br><span class="line">(2)每个子网的地址中有32-28=4位留给主机用，因此共有2的4次方即16个地址（可用的有14个）</span><br><span class="line">(3)地址中的前三个字节分别记为B1,B2,B3则136.23.12.64/26=B1.B2.B3.01000000/26</span><br><span class="line">四个子网的地址块是：</span><br><span class="line">B1.B2.B3.01000000/28=136.23.12.64/28,</span><br><span class="line">B1.B2.B3.01010000/28=136.23.12.80/28,</span><br><span class="line">B1.B2.B3.01100000/28=136.23.12.96/28,</span><br><span class="line">B1.B2.B3.01110000/28=136.23.12.112/28,</span><br><span class="line">(4)136.23.12.64/28,</span><br><span class="line">		最小地址：B1.B2.B3.01000001=136.23.12.65,</span><br><span class="line">		最大地址：B1.B2.B3.01001110=136.23.12.78,</span><br><span class="line">   136.23.12.80/28,</span><br><span class="line">   		最小地址：B1.B2.B3.01010001=136.23.12.81</span><br><span class="line">   		最大地址：B1.B2.B3.01011110=136.23.12.94</span><br><span class="line">   136.23.12.96/28,</span><br><span class="line">   		最小地址：B1.B2.B3.01100001=136.23.12.97</span><br><span class="line">   		最大地址：B1.B2.B3.01101110=136.23.12.110</span><br><span class="line">   136.23.12.112/28,</span><br><span class="line">  		最小地址：B1.B2.B3.01110001=136.23.12.113</span><br><span class="line">   		最大地址：B1.B2.B3.01111110=136.23.12.126</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>4-41</strong>  假定网络中的路由器B的路由表有如下的项目（这三列分别表示“目的网络”、“距离”和“下一跳路由器”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+<th>下一跳路由器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N1</td>
+<td>7</td>
+<td>A</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>8</td>
+<td>F</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>4</td>
+<td>E</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>4</td>
+<td>F</td>
+</tr>
+</tbody></table>
+<p>​        现在B收到从C发来的路由信息（这两列分别表示“目的网络”和“距离”）：</p>
+<table>
+<thead>
+<tr>
+<th>目的网络</th>
+<th>距离</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>N6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>N8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>N9</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p>​    试求出路由器B更新后的路由表（详细说明每一个步骤）。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">先把收到的路由信息中的距离加一：</span><br><span class="line">		N2		5</span><br><span class="line">		N3		9</span><br><span class="line">		N6		5</span><br><span class="line">		N8		4</span><br><span class="line">		N9		6</span><br><span class="line">路由器B更新后的路由表如下：</span><br><span class="line">		N1	7	A	无新信息，不改变</span><br><span class="line">		N2	5	C	相同的下一跳，更新</span><br><span class="line">		N3	9	C	新的项目，添加进来</span><br><span class="line">		N6	5	C	不同的下一跳，距离更短，更新</span><br><span class="line">		N8	4	E	不同的下一跳，距离一样，不改变</span><br><span class="line">		N9	4	F	不同的下一跳，距离更大，不改变</span><br></pre></td></tr></table></figure>
+
+<h2 id="第五章-运输层"><a href="#第五章-运输层" class="headerlink" title="第五章 运输层"></a>第五章 运输层</h2><ol>
+<li>网络寻址实现： p203</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>运输层</td>
+<td>port</td>
+<td>端到端</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>IP</td>
+<td>主机之间</td>
+</tr>
+<tr>
+<td>数据链路层</td>
+<td>MAC</td>
+<td>相邻两个节点</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>TCP、UDP对比？  p207</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>对比</th>
+<th>UDP</th>
+<th>UDP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>协议名称</strong></td>
+<td>用户数据报协议</td>
+<td>传输控制协议</td>
+</tr>
+<tr>
+<td><strong>是否面向连接</strong></td>
+<td>无连接</td>
+<td>面向连接</td>
+</tr>
+<tr>
+<td><strong>是否支持广播或多播</strong></td>
+<td>支持一对一，一对多，多对一和多对多交互通信</td>
+<td>每一条TCP连接只能有两个端点，只能是点对点（一对一）的</td>
+</tr>
+<tr>
+<td><strong>是否提供可靠传输服务</strong></td>
+<td>尽最大努力交付（不可靠交付）</td>
+<td>可靠交付</td>
+</tr>
+<tr>
+<td><strong>对应用层报文的处理</strong></td>
+<td>面向报文</td>
+<td>面向字节流</td>
+</tr>
+<tr>
+<td><strong>流量控制和拥塞控制</strong></td>
+<td>不使用流量控制和拥塞控制</td>
+<td>使用流量控制和拥塞服务</td>
+</tr>
+<tr>
+<td><strong>首部开销</strong></td>
+<td>首部开销小，仅8字节</td>
+<td>首部最小20字节，最大60字节</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>port：端口，socket：套接字  p207</li>
+<li>熟知端口号或系统端口号：0~1023  p207</li>
+<li>UDP报文格式：p217</li>
+</ol>
+<p><img src="https://zsy.xyz/images/computer-networks/UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
+<ol start="3">
+<li>TCP报文格式</li>
+</ol>
+<p><img src="https://zsy.xyz/images/computer-networks/TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
+<ol start="3">
+<li>相同字段：源端口、目的端口、校验和  p217</li>
+<li>TCP的四个计时器：重传计时器、坚持计时器、保活计时器、时间等待计时器。  p225</li>
+<li>TCP的流量控制：滑动窗口技术。  p227</li>
+<li>TCP的拥塞控制方法：慢开始、拥塞避免、快重传、快恢复。  p232</li>
+<li>TCP，建立连接：3次握手，释放连接：4次握手。  p238  非大题</li>
+<li>课后题：p247 248</li>
+</ol>
+<h2 id="第六章-应用层"><a href="#第六章-应用层" class="headerlink" title="第六章 应用层"></a>第六章 应用层</h2><ol>
+<li>DNS：域名系统   p252</li>
+<li>WWW：万维网  p264</li>
+<li>URL：统一资源定位符  p266</li>
+<li>HTTP：超文本传输协议  p267</li>
+<li>HTML：超文本标记语言  p274</li>
+<li>电子邮件协议：  p284<ul>
+<li>SMTP：简单邮件传送协议</li>
+<li>POP：邮局协议</li>
+</ul>
+</li>
+<li>DHCP：动态主机配置协议，  p295</li>
+<li></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/期末复习/" rel="tag"># 期末复习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/12/mao-gai/" rel="next" title="毛泽东思想和中国特色社会主义理论体系概论">
+                <i class="fa fa-chevron-left"></i> 毛泽东思想和中国特色社会主义理论体系概论
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="tassel">
+            
+              <p class="site-author-name" itemprop="name">tassel</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zsy0216" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/5480278181" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Ep_Little_prince" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络"><span class="nav-number">1.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言：题型解析"><span class="nav-number">1.1.</span> <span class="nav-text">前言：题型解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-概述部分"><span class="nav-number">1.2.</span> <span class="nav-text">第一章 概述部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-物理层"><span class="nav-number">1.3.</span> <span class="nav-text">第二章 物理层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-数据链路层"><span class="nav-number">1.4.</span> <span class="nav-text">第三章 数据链路层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-网络层"><span class="nav-number">1.5.</span> <span class="nav-text">第四章 网络层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-运输层"><span class="nav-number">1.6.</span> <span class="nav-text">第五章 运输层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章-应用层"><span class="nav-number">1.7.</span> <span class="nav-text">第六章 应用层</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tassel</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">34.8k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("9VVhv0RPXqLP7GHimPD7BQ6Y-gzGzoHsz", "GI6gXQhWWFJIYCIXAYM627ut");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</body>
+</html>
+
+<!-- 页面点击小红心和文字 -->
+<script type="text/javascript" src="/js/src/click_show_love.js"></script>
+<script type="text/javascript" src="/js/src/click_show_text.js"></script>
