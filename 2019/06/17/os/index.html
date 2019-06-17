@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="期末复习,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="作业1（第一章）一、填空题 1.以下有关操作系统的叙述中，哪一个是不正确的          A.操作系统管理系统中的各种资源  B.操作系统为用户提供的良好的界面 C.操作系统就是资源的管理者和仲裁者  D.操作系统是计算机系统中的一个应用软件 2.操作系统所占用的系统资源和所需的处理器时间称为          A.资源利用率 B.系统性能 C.系统吞吐率 D.系统开销 3.操作系统所管理的资">
+<meta name="keywords" content="期末复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="os">
+<meta property="og:url" content="http://yoursite.com/2019/06/17/os/index.html">
+<meta property="og:site_name" content="Tassel">
+<meta property="og:description" content="作业1（第一章）一、填空题 1.以下有关操作系统的叙述中，哪一个是不正确的          A.操作系统管理系统中的各种资源  B.操作系统为用户提供的良好的界面 C.操作系统就是资源的管理者和仲裁者  D.操作系统是计算机系统中的一个应用软件 2.操作系统所占用的系统资源和所需的处理器时间称为          A.资源利用率 B.系统性能 C.系统吞吐率 D.系统开销 3.操作系统所管理的资">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-17T03:38:14.984Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="os">
+<meta name="twitter:description" content="作业1（第一章）一、填空题 1.以下有关操作系统的叙述中，哪一个是不正确的          A.操作系统管理系统中的各种资源  B.操作系统为用户提供的良好的界面 C.操作系统就是资源的管理者和仲裁者  D.操作系统是计算机系统中的一个应用软件 2.操作系统所占用的系统资源和所需的处理器时间称为          A.资源利用率 B.系统性能 C.系统吞吐率 D.系统开销 3.操作系统所管理的资">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/17/os/">
+
+
+
+
+
+  <title>os | Tassel</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tassel</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/17/os/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tassel">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tassel">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">os</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-17T11:09:48+08:00">
+                2019-06-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Review/" itemprop="url" rel="index">
+                    <span itemprop="name">Review</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/06/17/os/" class="leancloud_visitors" data-flag-title="os">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  10.4k
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="作业1（第一章）"><a href="#作业1（第一章）" class="headerlink" title="作业1（第一章）"></a>作业1（第一章）</h1><p>一、填空题</p>
+<p>1.以下有关操作系统的叙述中，哪一个是不正确的         </p>
+<p>A.操作系统管理系统中的各种资源 </p>
+<p>B.操作系统为用户提供的良好的界面</p>
+<p>C.操作系统就是资源的管理者和仲裁者 </p>
+<p>D.操作系统是计算机系统中的一个应用软件</p>
+<p>2.操作系统所占用的系统资源和所需的处理器时间称为         </p>
+<p>A.资源利用率 B.系统性能 C.系统吞吐率 D.系统开销</p>
+<p>3.操作系统所管理的资源包括:ⅠCPU Ⅱ 程序 Ⅲ 内存 Ⅳ 外部设备         </p>
+<p>A.Ⅰ和Ⅱ B.Ⅱ和Ⅲ C Ⅰ、Ⅱ和Ⅲ D.全部</p>
+<p>4.分时操作系统的主要特点是         </p>
+<p>A.个人独占机器资源 B.自动控制作业运行</p>
+<p>C.高可靠性和安全性 D.多个用户共享计算机资源</p>
+<p>5.分时操作系统的主要目标是         </p>
+<p>A.提高计算机系统的实时性 B.提高计算机系统的利用率</p>
+<p>C.提高软件的运行速度 D.提高计算机系统的交互性</p>
+<p>6.在用户程序中请求操作系统服务时应使用         </p>
+<p>A.终端命令 B.作业控制语言 C.系统调用 D.原语</p>
+<p>7.实时操作系统的主要目标是         </p>
+<p>A.计算机系统的交互性 B.计算机系统的利用率</p>
+<p>C.计算机系统的可靠性 D.提高软件的运行速度</p>
+<p>8.操作系统具有进程管理,存储管理,文件管理和设备管理的功能,下列有关描述中,哪一项是不正确的?         </p>
+<p>A.进程管理主要是对程序进行管理 B.存储管理主要管理内存资源</p>
+<p>C.文件管理可以有效的支持对文件的操作，解决文件共享、保密和保护问题</p>
+<p>D. 设备管理是指计算机系统中除了CPU和内存以外的所有输入输出设备的管理</p>
+<p>9..引入多道程序设计的目的是         </p>
+<p>A.增强系统的用户友好性 B.提高系统实用性 C.充分利用CPU D.扩充内存容量</p>
+<p>10.下列哪一个不是操作系统的主要特征?         </p>
+<p>A.并发性 B.共享性 C.灵活性 D.异步性</p>
+<p>11.下列特性中,哪一个不是进程的特性         </p>
+<p>A.交互性 B.异步性 C.并发性 D.静态性 </p>
+<p>12.在精确制导导弹中使用的操作系统应属于下列哪一种         </p>
+<p>A.批处理操作系统 B.个人计算机操作系统 C.实时操作系统 D.网络操作系统</p>
+<p>二、判断题</p>
+<p>1.早期的计算机中没有操作系统，用户直接与硬件打交道。     √    </p>
+<p>2．操作系统是控制应用程序执行的程序，并充当应用程序和计算机硬件之间的接口。    √     </p>
+<p>三、名词解释：</p>
+<p>1．脱机I/O、联机I/O</p>
+<p>脱机I/O:程序和数据的输入和输出都是在外围机的控制下完成的在脱离主机的情况下进行的。</p>
+<p>联机I/O:是指程序和数据的输入输出都是在主机的直接控制下进行的。</p>
+<p>2.临界资源</p>
+<p>在一段时间内只允许一个进程访问的资源</p>
+<p>3.单用户单任务OS、单用户多任务OS、多用户多任务OS（举例）</p>
+<p>​    单用户单任务OS：只允许一个用户上机，且只允许应用程序作为一个任务运行。MS-DOS CP/M</p>
+<p>​    单用户多任务OS：只允许一个用户上机，但允许用户把程序分为若干个任务，使它们并发执行。Windows</p>
+<p>​    多用户多任务OS：允许多个用户通过各自的终端，使用同一台机器，共享主机系统中的各种资源。Linux</p>
+<p>四、问答题：</p>
+<p>1.操作系统有哪几大特征？并给予解释。</p>
+<p>\1.   并发：指两个或多个事件在同一时间间隔内发生（不同于并行性，指两个或多个事件在同一时刻发生）；</p>
+<p>\2.   共享：指系统中的资源可供内存中多个并发执行的进程共同使用；</p>
+<p>\3.   虚拟：通过某种技术将一个物理实体变成若干个逻辑上的对应物的功能；</p>
+<p>\4.   异步：进程是以人们不可预知的速度向前推进的；</p>
+<p>2.文件管理有哪些主要功能？其主要任务是什么？</p>
+<p>\1.   文件存储空间的管理</p>
+<p>\2.   目录管理</p>
+<p>\3.   文件的读/写管理和保护</p>
+<p>\4.   主要任务：对用户文件和系统文件进行管理以方便用户使用，并保证文件的安全性。</p>
+<h1 id="阶段测试1（第二章）"><a href="#阶段测试1（第二章）" class="headerlink" title="阶段测试1（第二章）"></a>阶段测试1（第二章）</h1><p>一、单项选择题</p>
+<p>1．以下对进程的描述中，错误的是        。</p>
+<p>​    A．进程是动态的概念    B．进程执行需要处理机</p>
+<p>​    C．进程是有生命期的    D．进程是指令的集合（程序是指令的集合）</p>
+<p>2．并发进程指的是        。</p>
+<p>​    A．可并行执行的进程    B．可同一时刻执行的进程</p>
+<p>​    C．可同时执行的进程    D．不可中断的进程</p>
+<p>3．分配到必要的资源并获得处理机时间的进程状态是        。</p>
+<p>​    A．就绪状态    B．运行状态    C．阻塞状态    D．撤销状态</p>
+<p>4．某个运行中的进程要申请打印机，它将变为        。</p>
+<p>​    A．就绪态    B．阻塞态    C．创建态    D．撤销态</p>
+<p>5．以下进程状态转变中，        转变是不可能发生的。</p>
+<p>​    A．运行一&gt;就绪    B．运行一&gt;阻塞  C．阻塞一&gt;运行  D．阻塞一&gt;就绪</p>
+<p>6．当        时，进程从执行状态转变为就绪状态。</p>
+<p>A．进程被调度程序选中    B．时间片到</p>
+<p>​     C．等待某一事件          D．等待的事件发生</p>
+<p>7．进程状态由就绪态转换为运行态是由        引起的。</p>
+<p>A．中断事件    B．进程状态转换  C．进程调度  D．为程序创建进程</p>
+<p>8．一个进程被唤醒意味着        。</p>
+<p>​    A．该进程一定重新占用CPU    B．它的优先级变为最大</p>
+<p>​    C．其PCB移至就绪队列队首    D．进程变为就绪状态</p>
+<p>9．若P、V操作的信号量S初值为2，当前值为—1，则表示有        等待进程。</p>
+<p>A．0个    B.1个     C.2个     D.3个</p>
+<p>10．一次I/O操作的结束，有可能导致        。</p>
+<p>​    A．一个进程由阻塞变为就绪    B．几个进程由阻塞变为就绪</p>
+<p>​    C．一个进程由阻塞变为运行    D．几个进程由阻塞变为运行</p>
+<p>二、综合应用题</p>
+<p>1．在单用户系统中，有n个进程，问排在就绪队列和等待队列中进程个数的范围是什么?</p>
+<p>​    解：若就绪队列中有进程在排队，则调度程序必将其中一个调入CPU并运行，所以就绪队列中的进程个数为0～n-1。所有n个进程都有可能处于阻塞状态，所以等待队列中的进程个数为0～n。</p>
+<p>2．回答以下问题：</p>
+<p> (1)若系统中没有运行进程，是否一定没有就绪进程?为什么?</p>
+<p>​    是，因为若系统没有运行进程，那么系统很快会选择一个就绪进程运行。只有就绪队列无进程时，CPU才可能处于空闲状态。</p>
+<p>(2)若系统中既没有运行进程，也没有就绪进程，系统中是否就没有进程?为什么?</p>
+<p>​    不一定，因为系统中的所有进程可能都处于等待状态，但不一定处于死锁状态。</p>
+<p>(3)在采用优先级进程调度时，运行进程是否一定是系统中优先级最高的进程?</p>
+<p>​    不一定。因为高优先级的进程可能正处于等待队列。</p>
+<p>\3. 某博物馆最多可容纳500人同时参观，有一个出入口，该出入口一次仅允许一个人通过。参观者的活动描述如下：</p>
+<p>​    参观者进程i:</p>
+<p>​       Begin</p>
+<p>​         进门; 参观; 出门</p>
+<p>​       End</p>
+<p>​    </p>
+<p>定义两个信号量 </p>
+<p>Semaphore empty=500； //博物馆可以容纳的最多人数 </p>
+<p>Semaphore mutex=1； //用于出入口资源的控制 </p>
+<p>begin 参观者进程i： </p>
+<p>{ </p>
+<p>… </p>
+<p>P(empty)；</p>
+<p>P(mutex)；</p>
+<p>进门； </p>
+<p>V(mutex)； </p>
+<p>参观； </p>
+<p>P(mutex)； </p>
+<p>出门； </p>
+<p>V(mutex)； </p>
+<p>V(empty)； </p>
+<p>… </p>
+<p>} </p>
+<p>end</p>
+<p>\4. 桌上有一空盘，允许存放一个水果。爸爸可向盘中放苹果，也可向盘中放橘子，儿子专等吃盘中的橘子，女儿专等吃盘中的苹果。规定当盘空时一次只能放一只水果供吃者取用，请用P、V原语实现爸爸、儿子、女儿三个并发进程的同步。</p>
+<p>​    设置三个信号量： </p>
+<p>S，初值为1，用于爸爸、儿子、女儿三个进程间的互斥，表示盘中是否为空。SO，初值为0，用于爸爸、女儿两个进程间的同步，表示盘中是否有橘子。     SA，初值为0，用于爸爸、儿子两个进程间的同步，表示盘中是否有苹果。</p>
+<p>三个进程之间的同步描述如下：</p>
+<p>father进程    daughter进程    son进程 </p>
+<p>  L1：           L2：         L3：</p>
+<p>P(S)           P(SO)        P(SA)               将水果放入盘中  从盘中取出橘子   从盘中取出苹果</p>
+<p>if(放入是橘子)V(SO)    V(S)       V(S) </p>
+<p>else V(SA)        吃橘子      吃苹果            </p>
+<p>goto L1          goto L2     goto L3 </p>
+<h1 id="作业2（第二章）"><a href="#作业2（第二章）" class="headerlink" title="作业2（第二章）"></a>作业2（第二章）</h1><p>一、单项选择</p>
+<p>1．以下关于进程的描述中，正确的是        。</p>
+<p>​    A．进程获得CPU运行是通过调度得到的</p>
+<p>​    B．优先级是进程调度的重要依据，一旦确定就不能改变</p>
+<p>​    C．在单CPU的系统中，任意时刻都有一个进程处于运行状态</p>
+<p>D．进程申请CPU得不到满足时，其状态变为阻塞</p>
+<p>调度程序的功能是为进程分配处理机；动态优先级是可以改变的；有时计算机系统中没有任何进程运行，CPU处于空闲状态，计算机进行空转；进程已获得除CPU以外的资源时处于就绪状态。本题答案为A。</p>
+<p>2．一个进程是        。</p>
+<p>​    A．由处理机执行的一个程序         B．一个独立的程序+数据集</p>
+<p>​    C．PCB结构、程序和数据的组合     D．一个独立的程序</p>
+<p>3．在多道程序环境下，操作系统分配资源以        为基本单位。</p>
+<p>​    A．程序    B．指令    C．进程    D．作业</p>
+<p>4．操作系统通过        对进程进行管理。</p>
+<p>​    A．JCB    B．PCB    C．DCT D．CHCT</p>
+<p>5．当一个进程处于这样的状态时，        ，称为阻塞状态。</p>
+<p>​    A．它正等着输入一批数据        B．它正等着进程调度</p>
+<p>​    C．它正等着分给它一个时间片    D．它正等着进入内存</p>
+<p>6．一个进程的基本状态可以从其他两种基本状态转变过来，这个基本状态一定是        。</p>
+<p>​    A．运行状态    B．阻塞状态    c．就绪状态    D．完成状态</p>
+<p>7．以下可能导致一个进程从运行状态变为就绪状态的事件是        。</p>
+<p>​    A．一次I/O操作结束     B．运行进程需做I/O操作</p>
+<p>​    C．运行进程结束         D．出现了比现在进程优先级更高的进程</p>
+<p>8．以下说法中，        不是创建进程必须的。</p>
+<p>​    A．建立一个进程的进程表项    B．为进程分配内存</p>
+<p>C．为进程分配 CPU            D．将进程表项插入就绪队列中</p>
+<p>解：进程刚创建后处于就绪状态，所以不为其分配CPU。本题答案为C。</p>
+<p>9．以下关于父进程和子进程的叙述中，正确的是        。</p>
+<p>​    A．父进程创建了子进程，因此父进程运行完了，子进程才能运行</p>
+<p>​    B．父进程和子进程可以并发执行</p>
+<p>​    C．撤销子进程时，应该同时撤销父进程</p>
+<p>​    D．撤销父进程时，应该同时撤销子进程</p>
+<p>10．在引入线程的操作系统中，资源分配的基本单位是  ①C．进程  ，CPU分配的基本单位是② D进程 。</p>
+<p>​    A．程序    B．作业    C．进程    D．线程</p>
+<p>二、综合应用题</p>
+<p>1．为什么要引入进程概念?进程的基本特点是什么?它与程序有何联系和区别。</p>
+<p>​    解：为了能使程序并发执行，并且可以对并发执行的程序加以描述和控制</p>
+<p>​    基本特点：</p>
+<p>​       动态性、并发性、独立性和异步性。</p>
+<p>​    联系：</p>
+<p>​       进程是程序的一次执行过程，没有程序就没有进程；</p>
+<p>​    区别：</p>
+<p>\1.   进程是程序的执行，进程属于动态的概念；而程序是一组指令的集合，是静态的概念。</p>
+<p>\2.   进程是程序的执行，它是由声明过程的，由创建到死亡，进程的存在是暂时的，程序的存在是永久的。</p>
+<p>\3.   进程是程序的执行，所以进程的组成包括程序和数据。除此之外，进程还由记录进程状态信息的PCB组成。</p>
+<p>\4.   进程是竞争计算机系统资源的基本单位。</p>
+<p>\5.   一个进程能与其他进程并发地活动。</p>
+<p>\6.   一个程序可能对应多个进程，一个进程可以包含多个程序。也就是说，程序和进程无一一对应关系。</p>
+<p>\7.   进程的几个特点程序都不具备。</p>
+<p>2．设系统中有n(n&gt;2)个进程，且当前不执行进程调度程序，试考虑下述4种情况：</p>
+<p>①没有运行进程，有2个就绪进程，n个进程处于等待状态。</p>
+<p>②有1个运行进程，没有就绪进程，n-1个进程处于等待状态。</p>
+<p>③有1个运行进程，有1个就绪进程，n-2个进程处于等待状态。</p>
+<p>④有1个运行进程，n-1个就绪进程，没有进程处于等待状态。</p>
+<p>上述情况中，不可能发生的情况是哪些? </p>
+<p>①就绪队列非空，处理机不应休闲。</p>
+<p>\3. 用P、V操作管理临界区时，任何一个进程在进入临界区之前应调用<strong>P</strong>操作，退出临界区时应调用<strong><em>V</em></strong>操作。</p>
+<p>\4. 信箱是一种   间接  通信方式；用信箱实现通信时，应有      发送  <strong>_和</strong>接收<strong>两条基本原语。信箱在逻辑上分成</strong>信箱头__ _和__信箱体_两部分，前一部分存放有关信箱的描述，后者由若干格子组成，每格存放一信件，格子的数目和大小在创建信箱时确定。</p>
+<p>\5. 有一自动管理的地下车库，最多可停放50辆汽车，出入口都有自动感应装置。当有车到达入口时，若车库中没有停满车，则开启入口门让其驶入，否则需等待；当有一辆车要离开车库时，若有车等待进入，则允许一辆车驶入；否则，增加一个空位。假定这个自动管理系统采用P、V操作来管理，回答下列问题：</p>
+<p>(1) 应定义几个信号量?写出信号量的初值。</p>
+<p>​           1                 50</p>
+<p>(2) 在下面管理系统的程序结构中的方框位置填上能满足管理要求的P、V操作。</p>
+<p>入口：                                出口：</p>
+<p>Begin  P                                  begin  V</p>
+<p>一辆车到达入口；                      一辆车到达出口；</p>
+<p>打开车库门；</p>
+<p>打开车库门；</p>
+<p>汽车驶入车库；                      汽车离开车库；</p>
+<p>end；                                 end；</p>
+<p>(3) 分别写出信号量值变化成&gt;0、&lt;0和=0时的含义。</p>
+<p>大于0：表示车库中有空位</p>
+<p>小于0：表示车库已满，且有车辆等待进入</p>
+<p>等于0：表示车库已满，且没有车辆等待</p>
+<p>\6. 从调度性、并发性、拥有资源及系统开销方面对进程和线程进行比较。</p>
+<p>​    调度性：在传统OS中，进程是资源拥有的基本单位，也是独立调度和分派的基本单位；在引入线程的OS中，线程是独立调度和分派的基本单位，进程只是拥有资源的基本单位，两个角色分开。</p>
+<p>​    并发性：在引入线程的OS中，不仅进程间可以并发执行，而且一个进程内的多线程也可以并发执行，因而比传统的OS具有更好的并发性；</p>
+<p>​    拥有资源：在各类OS中，拥有资源的基本单位都是进程，线程除了一点简单资源外，本身基本不拥有系统资源，但它可以共享所属进程的资源。</p>
+<p>​    系统开销：创建和撤销进程，由于要分配和回收系统资源，因此系统开销远大于创建和撤销线程；进程切换要保存和设置的现场信息也较多，所以进程切换的系统开销也大于线程切换。</p>
+<p>\7. 用记录型信号量解决哲学家进餐问题。</p>
+<p>8 .系统中有多个生产者进程和消费者进程，共用一个可以存1000个产品的缓冲区（初始为空），当缓冲区未满时，生产者进程可以放入一件其生产的产品，否则等待；当缓冲区未空时，消费者进程可以取走一件产品，否则等待。要求一个消费者进程从缓冲区连续取出10件产品后，其他消费者进程才可以取产品，请用P，V（wait，signal）操作实现进程间的互斥和同步，要求写出完整的过程；并指出所用信号量的含义和初值。</p>
+<h1 id="作业3（第三章）"><a href="#作业3（第三章）" class="headerlink" title="作业3（第三章）"></a>作业3（第三章）</h1><p>一、判断题</p>
+<p>1、循环轮转调度中，时间片q越小，响应时间越短，所以调度效果越好。       （   ×   ）</p>
+<p>2、按银行家算法来分配资源是不会产生死锁的。                             （   √   ）</p>
+<p>二、选择题</p>
+<p>1、下列进程调度算法中，                调度算法对长进程比较有利。</p>
+<p>A、先来先服务       B、时间片轮转        C、短进程优先     D、最高响应比优先</p>
+<p>2、以下哪种调度算法不可能是剥夺方式的？                </p>
+<p>A、先来先服务   B、最短CPU执行期优先   C、最高优先权   D、轮转法</p>
+<p>3、预防死锁的方法通常是打破四个必要条件之一，但一般不能破坏(        )条件。</p>
+<p>A、互斥条件          B、请求保持条件       C、不剥夺条件       D、环路等待条件</p>
+<p>4、若系统中有五台绘图仪，有多个进程均需要使用两台，规定每个进程一次仅允许申请一台，则至多允许（      ）个进程参于竞争，而不会发生死锁。</p>
+<p>A、5             B、2                  C、3                   D、4</p>
+<p>5、在进程资源图中(   )是发生死锁的必要条件。</p>
+<p>A、互斥        B、可剥夺件             C、环路                D、同步</p>
+<p>三、填空题</p>
+<p>1、产生死锁有四个必要条件，预先分配策略破坏了<strong><em>请求和保持</em></strong>条件，使死锁不会发生；而有序分配策略破坏了<strong><em>循环等待</em></strong>条件，也同样使死锁不会发生。</p>
+<p>2、银行家算法是在能确保系统处于    安全状态     的情况下，才把资源分配给申请者的。</p>
+<p>四、简答题</p>
+<p>1、课后作业P127：1、6、11、15、23、27</p>
+<p>五、综合题</p>
+<p>1、某操作系统采用非抢占的调度方式，若有4个作业A、B、C、D，它们的到达时间、估计的运行时间和设置的优先级如下表所示（单位为S）。请回答下列问题（要求给出过程）：</p>
+<p>（1）采用先来先服务调度算法，调度顺序是什么？作业的平均周转时间是多少？</p>
+<p>（2）采用最短作业优先调度算法时,调度顺序是什么？作业的平均周转时间是多少？</p>
+<p>（3）采用最高优先级优先的调度算法时,调度顺序是什么？作业的平均周转时间是多少？    </p>
+<table>
+<thead>
+<tr>
+<th>作业</th>
+<th>到达时间</th>
+<th>运行时间</th>
+<th>优先级(大者高)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1</td>
+<td>10</td>
+<td>3</td>
+</tr>
+<tr>
+<td>C</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>D</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</tbody></table>
+<p>2、课后作业P128：30。</p>
+<p>3、某系统有三类非剥夺性资源，其中A类资源共有2个、B类资源共有2个、C类共有3个；若有三个进程P1、P2、P3，它们对资源的占用和请求情况如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th>进程</th>
+<th>资源占用情况</th>
+<th>资源请求情况</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td>A</td>
+<td>B</td>
+<td>C</td>
+<td></td>
+</tr>
+<tr>
+<td>P1</td>
+<td>1</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P2</td>
+<td></td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>P3</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>请用死锁定理解释该状态是否发生了死锁？(要给出过程)</p>
+<h1 id="阶段测试2（第三章）"><a href="#阶段测试2（第三章）" class="headerlink" title="阶段测试2（第三章）"></a>阶段测试2（第三章）</h1><p>一、判断题</p>
+<p>1、先来先服务（FCFS）算法是一种简单的调度算法，但其效率比较高。（   ×  ）</p>
+<p>2、FCFS调度算法对短作业有利。（      ×     ）</p>
+<p>3、时间片的大小对轮转法（RR）的性能有很大的影响，时间片太短，会导致系统开销大大增加。（      √     ）</p>
+<p>4、进程申请CPU得不到满足时, 其状态变为等待态。                      （    ×    ）</p>
+<p>5、系统处于不安全状态必然导致系统死锁。                              （    ×    ）</p>
+<p>二、选择题</p>
+<p>1、在进行作业调度时，要想兼顾作业等待时间和作业执行时间，应选取          。</p>
+<p>A.轮转法      B.先进先出调度算法      C.响应比高优先算法      D.短作业优先调度</p>
+<p>2、规定进程必须一次性地申请其在整个执行过程中所需要的全部资源，破坏了                 条件，保证死锁不会发生。</p>
+<p>环路等待 B. 不剥夺        C. 互斥        D. 请求保持</p>
+<p>3、用P、V操作管理临界区时，信号量的初值应定义为          。</p>
+<p>A．—1            B．0              C．1               D．2</p>
+<p>4、死锁定理用于                                。</p>
+<p>A.死锁预防    B.死锁解除    C.死锁避免    D.死锁检测</p>
+<p>5、某系统正在执行三个进程P1、P2和P3，各进程的计算(CPU)时间和I/O时间比例如下表所列：为提高系统资源利用率，合理的进程优先级设置应为          。</p>
+<table>
+<thead>
+<tr>
+<th>进程</th>
+<th>计算时间</th>
+<th>I/O时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P1</td>
+<td>90%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>50%</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>15%</td>
+<td>85%</td>
+</tr>
+</tbody></table>
+<p>A．P1＞P2＞P3     B．P3＞P2＞P1      C．P2＞P1=P3      D．P1＞P2=P3</p>
+<p>三、填空题</p>
+<p>1、在响应比最高者优先的作业调度算法中，当各个作业等待时间相同时，     要求服务时间短     的作业将得到优先调度；当各个作业要求运行的时间相同时，      等待时间长      的作业得到优先调度。</p>
+<p>2、分时系统采用的调度方法是    轮转调度算法        。在分时系统中，当用户数目为100时，为保证响应时间不超过2秒，此时时间片最大应为      0.02        。</p>
+<p>3、有三个同时到达的作业J1，J2和J3，它们的执行时间分别是T1，T2和T3，且T1&lt;T2&lt;T3。系统按单道方式运行且采用短作业优先算法，则平均周转时间是   (3T1+2T2+T3)/3             。</p>
+<p>4、作业进入系统到运行结束，可能要经历作业调度,进程调度 、中级调度 三级调度。</p>
+<p>5、在处理死锁问题的方法中，银行家算法属于  _避免死锁<strong>的方法；资源的按序请求摒弃了产生死锁的</strong>循环等待    条件。</p>
+<p>6、某系统中有3个并发进程，分别需要某类资源2、3、3个，试问该类资源最少应配备<strong><em>5</em></strong>个，使它们一定不会发生死锁。</p>
+<p>四、综合应用题</p>
+<p>1、设有四道作业，它们的提交时间及执行时间由下表给出:</p>
+<p>作业号 提交时间 执行时   间   优先级</p>
+<p>1        8.5       1.0     2</p>
+<p>2        9.2       1.6     4</p>
+<p>3        9.4       0.5     1</p>
+<p>4        9.8       2.0     3</p>
+<p>试计算在单道程序环境下，采用先来先服务调度算法（4分）、最短作业优先调度算法（8分）和高优先级优先调度算法（8分）时的平均周转时间 (时间单位:小时，以十进制进行计算；要求写出计算过程)。</p>
+<p>2、设系统中有3种类型的资源（A，B，C）和5个进程P1，P2，P3，P4，P5。A资源的总数为17，B资源的总数为5，C资源的总数为20。在To时刻的系统状态见下表所示。系统采用银行家算法实施死锁避免策略。</p>
+<p>① To时刻是否为安全状态？若是，请给出安全序列。（7分）</p>
+<p>② 在To时刻,若进程P2请求资源（0，3，4），是否能实现资源分配？为什么？（3分）</p>
+<p>③ 在②的基础上，若进程P3请求资源（2，0，1），是否能实施资源分配？为什么？（10分）</p>
+<p>（请给出必要过程）</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Allocation</th>
+<th>Need</th>
+<th>Available</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>P1   P2   P3   P4   P5</td>
+<td>2      1       2   4      0       2   2      0       4   4      0       5   3      1       4</td>
+<td>3      4       7   1      3       4   2      2       1   0      0       6   1      1       0</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="作业4（第四章）"><a href="#作业4（第四章）" class="headerlink" title="作业4（第四章）"></a>作业4（第四章）</h1><p>一、选择填空题</p>
+<p>1、在存储管理中，采用覆盖与交换技术的目的是            。</p>
+<p>A. 节省存储空间                  B. 物理上扩充主存容量</p>
+<p>C. 提高CPU利用率                   D. 实现主存共享</p>
+<p>覆盖和交换是虚拟上扩充内存的技术。</p>
+<p>2、动态重定位技术依赖于            。</p>
+<p>A. 重定位装入程序             B. 重定位寄存器</p>
+<p>C. 地址机构                      D. 目标程序</p>
+<p>3、在固定分区分配中,每个分区的大小是            .</p>
+<p>A.相同   B.随作业长度变化    C.可以不同但预先固定   D.可以不同但根据作业长度固定</p>
+<p>4、在连续存储管理方式中，可重定位分区管理采用紧凑技术的目的是<strong><strong>____</strong></strong>。</p>
+<p>A.增加主存容量    B. 缩短访问周期    C. 集中空闲区   D.加速地址转换</p>
+<p>5、分区管理中采用”最佳适应”分配算法时,宜把空闲区按            次序登记在空闲区表中.</p>
+<p>A.长度递增    B.长度递减    C.地址递增    D.地址递减</p>
+<p>6、若一个系统采用分页存储管理方式，当一个进程处于执行态时，该进程的页表始址和页表长度信息将被送至           。</p>
+<p>A.PCB    B. 物理地址寄存器     C. 页表寄存器       D. 重定位寄存器</p>
+<p>7、采用段式存储管理的系统中,若地址用24位表示,其中8位表示段号,则允许每段的最大长度是＿＿＿.</p>
+<p>  A.2的24次方    B.2的16次方    C.2的8次方    D.2的32次方</p>
+<p>8、首次适应算法的空闲区是<strong>____</strong>.</p>
+<p>A.按地址递增顺序连在一起    B.始端指针表指向最大空闲区</p>
+<p>C.按大小递增顺序连在一起    D.寻找从最大空闲区开始</p>
+<p>9、在分页地址环境下,程序员编制的程序,其地址空间是连续的，分页是由<strong>____</strong>完成的。</p>
+<p>A.程序员     B.编译地址     C.用户     D.系统</p>
+<p>10、在段页式存储管理系统中，内存等分成<strong>_ A.块___</strong>，程序按逻辑模块划分成若干_   D. 段 ___</p>
+<p>A.块      B. 基块     C. 分区       D. 段     E. 页号       F. 段长</p>
+<p>11、某段表的内容表示如下:</p>
+<table>
+<thead>
+<tr>
+<th>段号                      段首址                       段长度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0                         120K                        40K   1                         760K                        30K   2                         480K                        20K   3                         370K                        20K</td>
+</tr>
+</tbody></table>
+<p> 一逻辑地址为 (2，154) , 它对应的物理地址为<strong>_____</strong>.</p>
+<p>A.120K+2    B. 480K+154    C. 30K+154            D. 2+480K</p>
+<p>12、如果一个程序为多个进程所共享, 那么该程序的代码在执行的过程中不能被修改, 即程序应该是<strong>_____</strong>.</p>
+<p>A.可执行码     B. 可重入码p160     C.可改变码       D.可再现码</p>
+<p><strong>二、</strong> <strong>填空题</strong></p>
+<p>\1. 将作业地址空间中的逻辑地址转换为贮存中的物理地址的过程为_ 重定位_.</p>
+<p>\2. 在页式和段式管理中, 指令的地址结构形式分别为__       页号__            和<strong>页内地址（位移量）<em>、</em></strong>段号<strong>__</strong>和<strong><strong>段内地址__</strong></strong>。</p>
+<p>\3. 段表表目的主要内容包括<strong><strong>起始地址___</strong></strong>和<strong><strong><em>段的长度_</em></strong></strong>.</p>
+<p>4．页表表目的主要内容包括<strong><em>页号____</em></strong>、<strong><strong>块号_</strong></strong>.  </p>
+<p>5．主存中一系列物理存储单元的集合称为<strong><strong>存储空间___</strong></strong>. </p>
+<p>6．静态重定位在<strong>进程装入_</strong>时进行；而动态重定位在<strong>运行</strong>时进行。</p>
+<p>7．在段页式存储管理系统中，每道程序都有一个<strong><em>段</em>表和一组</strong>页__表。</p>
+<p><strong>三、简答题</strong></p>
+<p>第四章课后P162: 11、14、19、24、26</p>
+<p>没有快表的情况下，基本分页、基本分段、基本段页式存储管理，要访问一个数据需要访问内存的次数？2   2   3</p>
+<p><strong>四、分析题</strong></p>
+<p>1、某系统采用页式存储管理策略，拥有逻辑空间32页，每页为2KB，拥有物理空间1MB。</p>
+<p>（1）写出逻辑地址的格式。</p>
+<p>（2）若不考虑访问权限等，进程的页表有多少项？每项至少有多少位？</p>
+<p>（3）如果物理空间减少一半，页表结构应相应作怎样的改变？</p>
+<p>​                                                  </p>
+<p>2、某程序在逻辑地址100处有一条取数指令LOAD 1,200，而200单元存放数据2500，设程序分配到内存起始地址为5000的单元。要求分别用图表示出如下三种地址变换过程：</p>
+<p>（1）静态重定位；</p>
+<p>（2）动态重定位；</p>
+<p>（3）页面大小为100个单元，该程序的页面顺序映射到50、51、52、53号物理块上。</p>
+<p>（选择每题3分，填空每空1分，简答每题5分，分析每题10分）</p>
+<h1 id="作业5（第五章）"><a href="#作业5（第五章）" class="headerlink" title="作业5（第五章）"></a>作业5（第五章）</h1><p>一、单选题</p>
+<p>\1. 虚拟存储器的最大容量            。</p>
+<p>A.为内外存容量之和    B. 由计算机的地址结构决定  </p>
+<p> C.是任意的           D. 由作业的地址空间决定</p>
+<p>2.在虚拟存储系统中，若进程在内存中占3块（开始时为空），采用先进先出页面淘汰算法，当执行访问页号序列为1﹑2﹑3﹑4﹑1﹑2﹑5﹑1﹑2﹑3﹑4﹑5﹑6时，将产生            次缺页中断。</p>
+<p>A.7                 B. 8                    C. 9         D. 10</p>
+<p>\3. 实现虚拟存储器的目的是             .</p>
+<p>A.实现存储保护      B.实现程序浮动       C.扩充辅存容量      D.扩充主存容量</p>
+<p>\4. 作业在执行中发生了缺页中断,经操作系统处理后,应让其执行       指令.</p>
+<p>A.被中断的前一条    B.被中断的       C.被中断的后一条        D.启动时的第一条</p>
+<p>5.在请求分页存储管理中，若采用FIFO页面淘汰算法，则当分配的页面数增加时，缺页中断的次数<strong>____</strong>。(在最后一题做完后再作答)</p>
+<p>A．减少         B. 增加           C. 无影响            D. 可能增加也可能减少</p>
+<p>6.虚拟存储管理系统的基础是程序的<strong>____</strong>理论.</p>
+<p>A.局部性       B. 全局性        C. 动态性            D.虚拟性</p>
+<p>\7. 下述<strong>___</strong>页面淘汰算法会产生Belady现象.</p>
+<p>A.先进先出      B. 最近最少使用       C. 最近不经常使用     D. 最佳</p>
+<p><strong>二**</strong>.** <strong>填空题</strong></p>
+<p>1．在虚存管理中，虚拟地址空间是指逻辑地址空间，实地址空间是指物理地址空间；前者的大小只受_  机器的地址长度  限制，而后者的大小受_物理内存大小。</p>
+<p>2．若选用的<strong>置换_</strong>算法不合适，可能会出现抖动现象。</p>
+<p>3．在页式存储管理系统中，常用的页面淘汰算法有：<strong>最佳置换算法_</strong>，选择淘汰不再使用或最远的将来才使用的页；<strong>先进先出页面置换算法___</strong>，选择淘汰在主存驻留时间最长的页；<strong><em>最近最久未使用置换算法_</em></strong>选择淘汰离当前时刻最近的一段时间内使用代最少的页。</p>
+<p>4．在虚拟段式存储管理系统中，若逻辑地址的段内地质大于段表中该段的段长，则发生<strong>地址越界中断_</strong>.</p>
+<p><strong>三、简答题：</strong></p>
+<p>P189: 3、6、7、14、15</p>
+<p>1、什么是抖动？（P182）</p>
+<p>2、请求分段存储管理方式下，在地址变换过程中，可能出现哪些中断？分别在什么情况下发生？</p>
+<p>3、在分段系统中，为确保段信息安全，采取的保护措施有哪些？</p>
+<p><strong>四、综合题：</strong></p>
+<p>1、一个进程已经分配到4个物理块，每一页的装入时间、最后访问时间、访问位A、修改位M如下表所示（所有数字为十进制）：</p>
+<p>（1）若页面大小为1024B，则逻辑地址3125对应的物理地址是什么？</p>
+<p>（2）当进程访问4号页面时，产生缺页中断。请分别用FIFO、LRU和改进型Clock置换算法选择淘汰页面；要求给出其页号，并说明作出该决定的原因。</p>
+<table>
+<thead>
+<tr>
+<th>页号</th>
+<th>块号</th>
+<th>装入时间</th>
+<th>最后访问时间</th>
+<th>访问位A</th>
+<th>修改位M</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>7</td>
+<td>60</td>
+<td>279</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>130</td>
+<td>290</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>4</td>
+<td>26</td>
+<td>160</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>20</td>
+<td>200</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>2、在一个请求分页存储管理系统中，一个作业的页面走向为4，3，2，1，4，3，5，4，3，2，1，5，当分配给该作业的物理块数分别为3，4时，试计算采用下述页面淘汰算法时的缺页率（假设开始执行时主存中没有页面），并比较所得结果。</p>
+<p>(1)最佳置换淘汰算法</p>
+<p>(2)先进先出淘汰算法</p>
+<p>(3)最近最久未使用淘汰算法</p>
+<p>(一题每空3分，二题每空2分，三题每题5分，四（1）10分4/2/2/2，四（2）13分4/4/5)</p>
+<h1 id="阶段测试三（）"><a href="#阶段测试三（）" class="headerlink" title="阶段测试三（）"></a>阶段测试三（）</h1><p>一、判断题</p>
+<p>1、动态地址映射是指在程序装入主存时，将逻辑地址转换为物理地址。      （   ×  ）</p>
+<p>2、在没有快表的情况下，基本段页式系统每访问一次数据，要访问3次内存。     （   √   ）</p>
+<p>3、采用动态重定位技术的系统，目标程序可以不经任何改动，而装入物理内存。   （   √   ）</p>
+<p>4、在虚存存储器系统中, 只要磁盘空间无限大, 作业就能拥有任意大的编址空间。 （    ×  ）</p>
+<p>5、请求分段存储管理中，分段的尺寸由系统决定。                             （   ×   ）</p>
+<p>6、请求段页式系统是以页为单位管理用户的虚空间，以段为单位管理内存空间。   （   ×   ）</p>
+<p>7、虚拟存储器容量的扩大是以牺牲CPU时间以及内、外存交换时间为代价的。     （   √   ）</p>
+<p>8、将用户源程序变成可在内存中执行的程序，要经过的步骤是：链接-&gt;编译-&gt;装入。（   ×   ）</p>
+<p>二、填空题</p>
+<p>1、文件系统中，位示图的主要功能是                    。</p>
+<p>   A.实现按名存取  B.文件目录查找     C.管理文件存储器的空闲空间   D.允许重名</p>
+<p>2、为了解决“命名冲突”问题，通常在文件系统中采用                  。</p>
+<p>   A.约定的方法     B.路径     C.多级目录     D.索引</p>
+<p>3、下列选项中，属于多级页表优点的是<strong>_____</strong>。</p>
+<p>   A.加快地址变换速度                   B. 减少页表项所占字节数</p>
+<p>   C.减少页表所占的连续内存空间        D. 减少缺页中断次数</p>
+<p>4、不适当的页面置换算法可能会导致进程发生“抖动”，抖动是指<strong><strong>____</strong></strong>。</p>
+<p>   A.使用机器时，造成屏幕闪烁的现象</p>
+<p>   B.刚被调出的页面又立即被装入所形成的频繁装入/调出的现象　</p>
+<p>   C.系统盘有问题，造成系统不稳定的现象</p>
+<p>   D.由于主存分配不当，偶然造成主存不够的现象</p>
+<p>三、综合题</p>
+<p>1、在一个请求分段系统中，作业的虚地址为24位，其中高8位是段号，低16位为段内相对地址。试问：</p>
+<p>①一个作业最多可以有多少段？</p>
+<p>​    28 =256段</p>
+<p>②每段的最大长度为多少字节？</p>
+<p>216=64KB</p>
+<p>③系统中一个作业的段表如右图，试计算逻辑地址[0，600]、[1，80]、[3，60]的主存地址。当无法进行地址变换时，应说明产生何种中断。</p>
+<table>
+<thead>
+<tr>
+<th>段号</th>
+<th>段长</th>
+<th>主存起始地址</th>
+<th>是否在主存</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>600</td>
+<td>2100</td>
+<td>是</td>
+</tr>
+<tr>
+<td>1</td>
+<td>100</td>
+<td></td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>40</td>
+<td>3000</td>
+<td>是</td>
+</tr>
+<tr>
+<td>3</td>
+<td>80</td>
+<td>4000</td>
+<td>是</td>
+</tr>
+</tbody></table>
+<p> 2、请求分页管理系统中，假设某进程的页表内容如下表所示（H代表十六进制）。</p>
+<p>页号   页框号    存在位</p>
+<p>0       101H       1</p>
+<p>1       –         0</p>
+<p>2       254H       1</p>
+<p>页面大小为4KB，一次内存的访问时间是100ns，一次快表的访问时间是10ns，处理一次缺页的平均时间为108ns（已含更新快表和页表的时间），进程所占内存块固定为2块，采用最近最少使用置换算法（LRU）和局部淘汰策略。假设①快表初始为空；②地址转换时先访问快表，若快表未命中，再访问页表（忽略访问页表之后的快表更新时间）；③存在位为0表示页面不在内存，产生缺页中断，缺页中断处理后，返回到产生缺页中断的指令处重新执行。设有虚地址访问序列2362H、1565H、25A5H，请问：</p>
+<p>（1）依次访问上述三个虚地址，各需多少时间？给出计算过程。</p>
+<p>（2）基于上述访问序列，虚地址1565H的物理地址是多少？请说明理由。</p>
+<h1 id="作业6"><a href="#作业6" class="headerlink" title="作业6"></a>作业6</h1><p>一、选择题</p>
+<p>1、对操作系统的文件系统而言，一个源程序、一批数据、一篇文章或一张图片等都可以被称为文件，只要它是<strong><strong>____</strong></strong>。</p>
+<p>A．连续分布在一片磁盘区域中的信息集合</p>
+<p>B．采用链接方式连接起来的多个磁盘块组成的信息集合</p>
+<p>C．逻辑上具有完整意义的信息集合</p>
+<p>D．属于同一个用户的一个信息集合</p>
+<p>2、通过<strong><strong>____</strong></strong>技术，可以把一台物理I/O设备虚拟为多台逻辑I/O设备。</p>
+<p>​    A.多道程序   B. 可重入码         C. 紧凑      D. Spooling</p>
+<p>3、使用绝对路径名访问文件是从<strong><strong>____</strong></strong>开始按目录结构访问某个文件。</p>
+<p>​    A.当前目录   B. 用户主目录    C. 根目录             D. 父目录</p>
+<p>4、在计算机系统中引入通道结构后仍然无法做到的是<strong><strong>____</strong></strong>。</p>
+<p>  A．主存储器和外围设备之间传送信息的操作直接通过通道进行</p>
+<p>  B．通道完全独立运行，无需由CPU 启动</p>
+<p>  C．外围设备可以和 CPU 并行工作</p>
+<p>  D．各通道上的外围设备可以并行工作</p>
+<p>5、程序员利用系统调用打开I/O设备时，通常使用的设备标识是<strong><strong>____</strong></strong>。</p>
+<p>​    A.逻辑设备名     B. 物理设备名       C. 主设备号         D. 从设备号</p>
+<p>6、在磁盘调度算法中，磁头只能单向移动，优先响应与当前磁头移动方向一致、且距离最近的进程的算法为           算法。</p>
+<p>   A.FIFO             B. SCAN             C. CSCAN              D. FSCAN</p>
+<p>7、为了允许不同用户的文件具有相同的文件名，通常在文件系统中采用<strong><strong>____</strong></strong>。</p>
+<p>​    A.重名翻译      B. 多级目录         C. 约定               D. 文件名</p>
+<p>8、在磁盘调度算法中，有可能使I/O请求无限期等待的调度算法是(        )。</p>
+<p>​    A.FCFS          B.SSTF　           C.SCAN            D.CSCAN</p>
+<p>二、简答题</p>
+<p>课本p236： 24、30、31</p>
+<p>（15、16、17）回答：有哪几种I/O控制方式?I/O控制方式发展的目标(宗旨/驱动力)是什么?各自的特点？字符设备、块设备分别用什么样的控制方式?</p>
+<p>（4、18）回答：设备无关性(设备独立性)的含义是什么?为什么要引入设备独立性?如何实现?</p>
+<p>假设磁盘有200个磁道，磁盘请求队列中是一些随机请求，它们按照到达的次序分别处于98、183、37、122、14、124、65、67号磁道上，当前磁头在53号磁道上，并向磁道号减小的方向上移动。</p>
+<p>(1)请给出按电梯（SCAN）算法进行磁盘调度时满足请求的次序。</p>
+<p>(2)计算平均寻道长度。</p>
+<p>课本P266： 4、16</p>
+<p>课本296： 2、3、7、9、14、15</p>
+<p>页面大小为4KB，一次内存的访问时间是100ns，一次快表的访问时间是10ns，处理一次缺页的平均时间为108ns（已含更新快表和页表的时间），进程所占内存块固定为2块，采用最近最少使用置换算法（LRU）和局部淘汰策略。假设①快表初始为空；②地址转换时先访问快表，若快表未命中，再访问页表（忽略访问页表之后的快表更新时间）；③存在位为0表示页面不在内存，产生缺页中断，缺页中断处理后，返回到产生缺页中断的指令处重新执行。设有虚地址访问序列2362H、1565H、25A5H，请问：</p>
+<p>（1）依次访问上述三个虚地址，各需多少时间？给出计算过程。</p>
+<p>（2）基于上述访问序列，虚地址1565H的物理地址是多少？请说明理由。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/期末复习/" rel="tag"># 期末复习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/13/computer-internet/" rel="next" title="计算机网络">
+                <i class="fa fa-chevron-left"></i> 计算机网络
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="tassel">
+            
+              <p class="site-author-name" itemprop="name">tassel</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/zsy0216" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/5480278181" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/Ep_Little_prince" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#作业1（第一章）"><span class="nav-number">1.</span> <span class="nav-text">作业1（第一章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阶段测试1（第二章）"><span class="nav-number">2.</span> <span class="nav-text">阶段测试1（第二章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业2（第二章）"><span class="nav-number">3.</span> <span class="nav-text">作业2（第二章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业3（第三章）"><span class="nav-number">4.</span> <span class="nav-text">作业3（第三章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阶段测试2（第三章）"><span class="nav-number">5.</span> <span class="nav-text">阶段测试2（第三章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业4（第四章）"><span class="nav-number">6.</span> <span class="nav-text">作业4（第四章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业5（第五章）"><span class="nav-number">7.</span> <span class="nav-text">作业5（第五章）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阶段测试三（）"><span class="nav-number">8.</span> <span class="nav-text">阶段测试三（）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#作业6"><span class="nav-number">9.</span> <span class="nav-text">作业6</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tassel</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">46k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("9VVhv0RPXqLP7GHimPD7BQ6Y-gzGzoHsz", "GI6gXQhWWFJIYCIXAYM627ut");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+</body>
+</html>
+
+<!-- 页面点击小红心和文字 -->
+<script type="text/javascript" src="/js/src/click_show_love.js"></script>
+<script type="text/javascript" src="/js/src/click_show_text.js"></script>
