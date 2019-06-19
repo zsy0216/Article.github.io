@@ -87,15 +87,15 @@
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="计算机网络前言：题型解析   题型 题数 分值占比    选择题 16 24   填空题 10 10   名词解释 10 10   简答题 3 24   计算题 2 22   应用题 1 10   第一章 概述部分 三网：电信网络、有线电视网络、计算机网络 p1  互联网的两个基本特点：连通性和共享 p2  所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3  ARPANET：I">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
-<meta property="og:image" content="https://zsy.xyz/images/computer-networks/MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png">
-<meta property="og:image" content="https://zsy.xyz/images/computer-networks/UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
-<meta property="og:image" content="https://zsy.xyz/images/computer-networks/TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
-<meta property="og:updated_time" content="2019-06-13T02:24:03.378Z">
+<meta property="og:image" content="http://yoursite.com/2019/06/13/computer-internet/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/13/computer-internet/MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/13/computer-internet/UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/13/computer-internet/TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:updated_time" content="2019-06-19T02:11:22.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络">
 <meta name="twitter:description" content="计算机网络前言：题型解析   题型 题数 分值占比    选择题 16 24   填空题 10 10   名词解释 10 10   简答题 3 24   计算题 2 22   应用题 1 10   第一章 概述部分 三网：电信网络、有线电视网络、计算机网络 p1  互联网的两个基本特点：连通性和共享 p2  所谓的共享即资源共享：可以是信息共享、软件共享也可以是硬件共享 p3  ARPANET：I">
-<meta name="twitter:image" content="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/13/computer-internet/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png">
 
 
 
@@ -477,7 +477,7 @@ $$</code></pre><ol start="13">
 <li><p>OSI和TCP/IP的体系结构 p31</p>
 </li>
 </ol>
-<p><img src="https://zsy.xyz/images/computer-networks/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="计算机网络体系结构"></p>
+<p><img src="%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="计算机网络体系结构"></p>
 <ol start="16">
 <li><p>PDU：（Protocol Data Unit）协议数据单元，指对等层次之间传送的数据单位。  p33</p>
 </li>
@@ -521,6 +521,7 @@ $$</code></pre><ol start="13">
 </ul>
 </li>
 <li><p>传输介质：p47</p>
+<p>抗干扰能力强的应选屏蔽双绞线和光纤    </p>
 <ul>
 <li>双绞线：p47<ul>
 <li>STP：屏蔽双绞线</li>
@@ -596,7 +597,7 @@ $$</code></pre><ol start="13">
 </ul>
 </li>
 <li><p>零比特填充：如何填/删？ p80</p>
-<p>​    在发送端，先扫描整个信息字段（通常用硬件实现，但也可用软件实现，只是会慢些）。只要发现5个联系1，则立即填入一个0.因此经过这种零比特填充的数据，就可以保证在信息字段中不会出现6个联系1。</p>
+<p>​    在发送端，先扫描整个信息字段（通常用硬件实现，但也可用软件实现，只是会慢些）。只要发现有5个连续1，则立即填入一个0.因此经过这种零比特填充的数据，就可以保证在信息字段中不会出现6个连续1。（六个连续的1表示一个帧的开始或结束）</p>
 <p>​    接收端在收到一个帧时，先找到标志字段F以确定一个帧的边界，接着再用硬件对其中的比特流进行扫描。每当发现5个连续1时，就把这5个连续1后的一个0删除，以还原成原来的信息比特流。这样就保证了透明传输：在所传送的数据比特流中可以传送任意组合的比特流，而不会引起对帧边界的错误判断。</p>
 </li>
 <li><p>拓扑类型：星形网，环形网，总线网。  p82</p>
@@ -607,7 +608,7 @@ $$</code></pre><ol start="13">
 <ul>
 <li>MAC帧格式：</li>
 </ul>
-<p><img src="https://zsy.xyz/images/computer-networks/MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png" alt="MAC帧格式"></p>
+<p><img src="MAC%E5%B8%A7%E6%A0%BC%E5%BC%8F.png" alt="MAC帧格式"></p>
 <ul>
 <li>帧尾(FCS)作用：校验</li>
 <li>前同步码（前导码）作用：实现位同步</li>
@@ -624,10 +625,10 @@ $$</code></pre><ol start="13">
 <h2 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h2><ol>
 <li><p>中间设备：  p116</p>
 <ul>
-<li>物理层使用的中间设备叫做转发器。升级版为集线器</li>
-<li>数据链路层：网桥或桥接器。（交换机）</li>
-<li>网络层：路由器</li>
-<li>网络层以上：网关</li>
+<li><strong>物理层</strong>使用的中间设备叫做<strong>转发器</strong>。升级版为集线器</li>
+<li><strong>数据链路层</strong>：<strong>网桥或桥接器</strong>。（交换机）</li>
+<li><strong>网络层</strong>：<strong>路由器</strong></li>
+<li><strong>网络层以上</strong>：<strong>网关</strong></li>
 </ul>
 </li>
 <li><p>IP地址：p119</p>
@@ -689,7 +690,7 @@ $$</code></pre><ol start="13">
 <li>C类：255.255.255.0</li>
 </ul>
 </li>
-<li><p>问题：前缀为/32，包含多少IP，多少主机IP</p>
+<li><p>问题：前缀为/30，包含多少IP，多少主机IP</p>
 <p>IP数：2<sup>32-30</sup> = 2<sup>2 </sup> = 4个</p>
 <p>​    IP地址位数为32位，除去前缀还有2位，可分配2的平方个IP</p>
 <p>主机数：4 - 2 = 2 个</p>
@@ -964,11 +965,11 @@ $$</code></pre><ol start="13">
 <li>熟知端口号或系统端口号：0~1023  p207</li>
 <li>UDP报文格式：p217</li>
 </ol>
-<p><img src="https://zsy.xyz/images/computer-networks/UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
+<p><img src="UDP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
 <ol start="3">
 <li>TCP报文格式</li>
 </ol>
-<p><img src="https://zsy.xyz/images/computer-networks/TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
+<p><img src="TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F.png" alt="img"></p>
 <ol start="3">
 <li>相同字段：源端口、目的端口、校验和  p217</li>
 <li>TCP的四个计时器：重传计时器、坚持计时器、保活计时器、时间等待计时器。  p225</li>
