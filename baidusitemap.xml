@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zsy.xyz/2019/08/23/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96/</loc>
+    <lastmod>2019-08-23</lastmod>
+  </url>  <url>
+    <loc>https://zsy.xyz/2019/05/30/blog-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-08-23</lastmod>
+  </url>  <url>
     <loc>https://zsy.xyz/2019/06/28/xinlu-10/</loc>
     <lastmod>2019-06-26</lastmod>
   </url>  <url>
@@ -25,9 +31,6 @@
     <loc>https://zsy.xyz/2019/06/13/computer-internet/</loc>
     <lastmod>2019-06-21</lastmod>
   </url>  <url>
-    <loc>https://zsy.xyz/2019/06/04/Python%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%92%8C%E4%BF%A1%E6%81%AF%E6%8F%90%E5%8F%96/</loc>
-    <lastmod>2019-06-21</lastmod>
-  </url>  <url>
     <loc>https://zsy.xyz/2019/06/20/xinlu-9/</loc>
     <lastmod>2019-06-20</lastmod>
   </url>  <url>
@@ -47,9 +50,6 @@
     <lastmod>2019-06-10</lastmod>
   </url>  <url>
     <loc>https://zsy.xyz/2019/05/30/start-my-blog/</loc>
-    <lastmod>2019-06-05</lastmod>
-  </url>  <url>
-    <loc>https://zsy.xyz/2019/05/30/blog-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-06-05</lastmod>
   </url>  <url>
     <loc>https://zsy.xyz/2019/06/01/4-22/</loc>
