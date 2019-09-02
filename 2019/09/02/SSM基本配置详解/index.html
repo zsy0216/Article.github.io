@@ -87,10 +87,12 @@
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="SSM基本依赖，及SSM完整配置文件访问：SSM基本依赖及配置  1    Spring  IOC容器配置1.1   applicationContext.xml1.1.1   配置数据源 导入资源文件，db.properties  1&amp;lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&amp;gt;  注：db.pr">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-02T10:33:07.000Z">
+<meta property="og:image" content="https://zsy0216.coding.me/image/java/ssm/mvc.png">
+<meta property="og:updated_time" content="2019-09-02T11:48:21.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSM基本配置详解">
 <meta name="twitter:description" content="SSM基本依赖，及SSM完整配置文件访问：SSM基本依赖及配置  1    Spring  IOC容器配置1.1   applicationContext.xml1.1.1   配置数据源 导入资源文件，db.properties  1&amp;lt;context:property-placeholder location=&quot;classpath:db.properties&quot;/&amp;gt;  注：db.pr">
+<meta name="twitter:image" content="https://zsy0216.coding.me/image/java/ssm/mvc.png">
 
 
 
@@ -389,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  2.5k
                 </span>
               
 
@@ -467,14 +469,10 @@
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 通过AOP配置提供事务增强，让service包下所有Bean的所有方法拥有事务 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span> <span class="attr">proxy-target-class</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"serviceMethod"</span></span></span><br><span class="line"><span class="tag">                  <span class="attr">expression</span>=<span class="string">"(execution(* zut.hospital.service..*(..))) and (@annotation(org.springframework.transaction.annotation.Transactional))"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">pointcut-ref</span>=<span class="string">"serviceMethod"</span> <span class="attr">advice-ref</span>=<span class="string">"txAdvice"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<!-- 配置声明式事务步骤：(基于配置文件)
-
-​          1.配置事务管理器
-
-​          2.配置事务属性
-
-​          3.配置事务切面，并把事务属性与事务切面关联起来 
-
+<p> 配置声明式事务步骤：(基于配置文件)</p>
+<p>​          1.配置事务管理器</p>
+<p>​          2.配置事务属性</p>
+<p>​          3.配置事务切面，并把事务属性与事务切面关联起来 </p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transactionManager"</span>  <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span> 			<span class="attr">p:dataSource-ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:advice</span> <span class="attr">id</span>=<span class="string">"txAdvice"</span> <span class="attr">transaction-manager</span>=<span class="string">”transactionManager”/</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">tx:methods</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">propagation</span>=<span class="string">""</span></span></span><br><span class="line"><span class="tag">             <span class="attr">...</span></span></span><br><span class="line">   &lt;/tx:attributes&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">tx:advice</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line">&lt;aop:config&gt;</span><br><span class="line"> <span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"txAdvice"</span> <span class="attr">pointcut</span>=<span class="string">"execution(* zut.hospital.service.*.*(..))"</span><span class="attr">id</span>=<span class="string">"txPointCut"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"txAdvice"</span> <span class="attr">pointcut-ref</span>=<span class="string">"txPointCut"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>使用注解开发时，spring配置文件中还需要加入自动扫描包的配置，用于自动装配bean，以及自动依赖注入，@Autowired标注的参数自动装配</p>
@@ -516,7 +514,7 @@
 <p>此外，使用以下配置时就不需再重新配置上面两个处理器映射器和处理器适配器；</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- mvc注解驱动：可以代替注解映射器和适配器的配置</span></span><br><span class="line"><span class="comment">    mvc注解驱动默认加载了很多的参数绑定，比如默认加载json转换解析器</span></span><br><span class="line"><span class="comment">    如果使用该注解驱动，就不用配置注解映射器和适配器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mvc:annotation-driven</span>&gt;</span><span class="tag">&lt;/<span class="name">mvc:annotation-driven</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>一般开发中使用<a href="mvc:annotation-driven">mvc:annotation-driven</a>，</p>
+<p>一般开发中使用<a href="mvc:annotation-driven" target="_blank" rel="noopener">mvc:annotation-driven</a>，</p>
 <p>对标注了注解@RequestMapping(“/url”)的方法进行映射。</p>
 <h2 id="2-4-视图解析器"><a href="#2-4-视图解析器" class="headerlink" title="2.4   视图解析器"></a>2.4   视图解析器</h2><p>作用：进行视图解析，根据逻辑视图名解析成真正的视图(view)</p>
 <p><code>springmvc.xml</code></p>
@@ -528,10 +526,10 @@
 <h1 id="3-Mybatis"><a href="#3-Mybatis" class="headerlink" title="3    Mybatis"></a>3    Mybatis</h1><h2 id="3-1-sqlMapConfig-xml"><a href="#3-1-sqlMapConfig-xml" class="headerlink" title="3.1   sqlMapConfig.xml"></a>3.1   sqlMapConfig.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration</span><br><span class="line">        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">		&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line"></span><br><span class="line">    &lt;settings&gt;</span><br><span class="line">        &lt;setting name=&quot;mapUnderscoreToCamelCase&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">    &lt;/settings&gt;</span><br><span class="line"></span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
 
 <p>mybatis基本配置已经在与spring整合时在applicationContext.xml中配置</p>
-<p>详细配置见<a href="http://www.mybatis.org/mybatis-3/zh/configuration.html#">http://www.mybatis.org/mybatis-3/zh/configuration.html#</a></p>
+<p>详细配置见<a href="http://www.mybatis.org/mybatis-3/zh/configuration.html#" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/zh/configuration.html#</a></p>
 <hr>
 <p>有问题请联系我</p>
--->
+
       
     </div>
     
@@ -727,7 +725,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Spring-IOC容器配置"><span class="nav-number">1.</span> <span class="nav-text">1    Spring  IOC容器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-applicationContext-xml"><span class="nav-number">1.1.</span> <span class="nav-text">1.1   applicationContext.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-配置数据源"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1   配置数据源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-配置mybatis-的sessionFactory"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2   配置mybatis 的sessionFactory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-配置MapperScannerConfigurer"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3   配置MapperScannerConfigurer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SqlSessionFactoryBean"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">SqlSessionFactoryBean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MapperScannerConfigurer"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">MapperScannerConfigurer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-配置声明式事务"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.1.4   配置声明式事务</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Spring-IOC容器配置"><span class="nav-number">1.</span> <span class="nav-text">1    Spring  IOC容器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-applicationContext-xml"><span class="nav-number">1.1.</span> <span class="nav-text">1.1   applicationContext.xml</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-配置数据源"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1   配置数据源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-配置mybatis-的sessionFactory"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2   配置mybatis 的sessionFactory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-3-配置MapperScannerConfigurer"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.1.3   配置MapperScannerConfigurer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SqlSessionFactoryBean"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">SqlSessionFactoryBean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MapperScannerConfigurer"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">MapperScannerConfigurer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-4-配置声明式事务"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.1.4   配置声明式事务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Springmvc-配置相关"><span class="nav-number">2.</span> <span class="nav-text">2    Springmvc 配置相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Springmvc"><span class="nav-number">2.1.</span> <span class="nav-text">2.1   Springmvc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-前端控制器"><span class="nav-number">2.2.</span> <span class="nav-text">2.2   前端控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-处理器映射器、处理器适配器"><span class="nav-number">2.3.</span> <span class="nav-text">2.3   处理器映射器、处理器适配器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-视图解析器"><span class="nav-number">2.4.</span> <span class="nav-text">2.4   视图解析器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-静态资源处理"><span class="nav-number">2.5.</span> <span class="nav-text">2.5  静态资源处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Mybatis"><span class="nav-number">3.</span> <span class="nav-text">3    Mybatis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-sqlMapConfig-xml"><span class="nav-number">3.1.</span> <span class="nav-text">3.1   sqlMapConfig.xml</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -768,7 +766,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">62.5k</span>
+    <span title="Site words total count">63.7k</span>
   
 </div>
 
