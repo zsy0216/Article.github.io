@@ -451,10 +451,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "yourname"</span><br><span class="line">git config --global user.email "youremail"</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置ssh</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>生成密钥，默认存储路径：C:\User\Administrator\.ssh</span><br><span class="line">ssh-keygen -t rsa -C"youremail"</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">生成密钥，默认存储路径：C:\User\Administrator\.ssh</span></span><br><span class="line">ssh-keygen -t rsa -C"youremail"</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在github上添加ssh key.</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>步骤1</span><br><span class="line">登录github，点击头像下的settings</span><br><span class="line"><span class="meta">#</span>步骤2</span><br><span class="line">打开左侧的SSH and GPG keys</span><br><span class="line"><span class="meta">#</span>步骤3</span><br><span class="line">点击右侧的new SSH key</span><br><span class="line"><span class="meta">#</span>步骤4</span><br><span class="line">Title 自定义</span><br><span class="line">Key输入刚才生成的C:\User\Administrator\.ssh路径下的id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">步骤1</span></span><br><span class="line">登录github，点击头像下的settings</span><br><span class="line"><span class="meta">#</span><span class="bash">步骤2</span></span><br><span class="line">打开左侧的SSH and GPG keys</span><br><span class="line"><span class="meta">#</span><span class="bash">步骤3</span></span><br><span class="line">点击右侧的new SSH key</span><br><span class="line"><span class="meta">#</span><span class="bash">步骤4</span></span><br><span class="line">Title 自定义</span><br><span class="line">Key输入刚才生成的C:\User\Administrator\.ssh路径下的id_rsa.pub</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>验证ssh是否添加成功</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
@@ -491,10 +491,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>生成目录结构</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="meta">#</span>或</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line"><span class="meta">#</span><span class="bash">或</span></span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>开启hexo服务,预览界面</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line"><span class="meta">#</span>或</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br><span class="line"><span class="meta">#</span><span class="bash">或</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>第一次访问</p>
 <p>访问：localhost:4000,可看到加载的页面。</p>
@@ -631,7 +631,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +653,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -749,7 +749,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">63.7k</span>
+    <span title="Site words total count">63.9k</span>
   
 </div>
 
