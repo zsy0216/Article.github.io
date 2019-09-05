@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="排序查询 语法：order by 子句 order by 排序字段1 排序方式1 ，  排序字段2 排序方式2...   排序方式： ASC：升序，默认的。 DESC：降序。   注意： 如果有多个排序条件，则当前边的条件值一样时，才会判断第二条件。    聚合函数将一列数据作为一个整体，进行纵向的计算。  count：计算个数 一般选择非空的列：主键 1`select count(id) fro">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-05T08:56:53.407Z">
+<meta property="og:updated_time" content="2019-09-05T08:59:27.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL复杂查询">
 <meta name="twitter:description" content="排序查询 语法：order by 子句 order by 排序字段1 排序方式1 ，  排序字段2 排序方式2...   排序方式： ASC：升序，默认的。 DESC：降序。   注意： 如果有多个排序条件，则当前边的条件值一样时，才会判断第二条件。    聚合函数将一列数据作为一个整体，进行纵向的计算。  count：计算个数 一般选择非空的列：主键 1`select count(id) fro">
@@ -443,13 +443,13 @@
 <li><p>avg：计算平均值</p>
 </li>
 </ol>
-<p>==注意==：聚合函数的计算，排除null值。</p>
+<p>==注意：聚合函数的计算，排除null值。==</p>
 <p>解决方案：</p>
 <ol>
 <li>选择不包含非空的列进行计算</li>
 <li>IFNULL函数</li>
 </ol>
-<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询:"></a>分组查询:</h2><ol>
+<h2 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h2><ol>
 <li><p>语法：group by 分组字段；</p>
 </li>
 <li><p>注意：</p>
@@ -668,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序查询"><span class="nav-number">1.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚合函数"><span class="nav-number">2.</span> <span class="nav-text">聚合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组查询"><span class="nav-number">3.</span> <span class="nav-text">分组查询:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页查询"><span class="nav-number">4.</span> <span class="nav-text">分页查询</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序查询"><span class="nav-number">1.</span> <span class="nav-text">排序查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚合函数"><span class="nav-number">2.</span> <span class="nav-text">聚合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组查询"><span class="nav-number">3.</span> <span class="nav-text">分组查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分页查询"><span class="nav-number">4.</span> <span class="nav-text">分页查询</span></a></li></ol></div>
             
 
           </div>
