@@ -7,8 +7,8 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://zsy.xyz/sitemap.xml
-Sitemap: http://zsy.xyz/baidusitemap.xml
+Sitemap: https://zsy.xyz/sitemap.xml
+Sitemap: https://zsy.xyz/baidusitemap.xml
 
-Sitemap: http://www.zsy.xyz/sitemap.xml
-Sitemap: http://www.zsy.xyz/baidusitemap.xml
+Sitemap: https://www.zsy.xyz/sitemap.xml
+Sitemap: https://www.zsy.xyz/baidusitemap.xml
