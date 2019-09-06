@@ -82,14 +82,14 @@
 <meta name="description" content="多表查询： 查询语法：   12345select	列名列表from	表名列表where....    例子： 创建部门表  12345CREATE TABLE dept(	id INT PRIMARY KEY AUTO_INCREMENT,	NAME VARCHAR(20));INSERT INTO dept (NAME) VALUES (&amp;apos;开发部&amp;apos;),(&amp;apos;市场部&amp;">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL完整性约束条件">
+<meta property="og:title" content="MySQL多表查询&amp;事务&amp;权限管理">
 <meta property="og:url" content="https://zsy.xyz/2019/09/06/MySQL多表查询&事务&权限管理/index.html">
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="多表查询： 查询语法：   12345select	列名列表from	表名列表where....    例子： 创建部门表  12345CREATE TABLE dept(	id INT PRIMARY KEY AUTO_INCREMENT,	NAME VARCHAR(20));INSERT INTO dept (NAME) VALUES (&amp;apos;开发部&amp;apos;),(&amp;apos;市场部&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-06T07:22:26.884Z">
+<meta property="og:updated_time" content="2019-09-06T07:28:11.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL完整性约束条件">
+<meta name="twitter:title" content="MySQL多表查询&amp;事务&amp;权限管理">
 <meta name="twitter:description" content="多表查询： 查询语法：   12345select	列名列表from	表名列表where....    例子： 创建部门表  12345CREATE TABLE dept(	id INT PRIMARY KEY AUTO_INCREMENT,	NAME VARCHAR(20));INSERT INTO dept (NAME) VALUES (&amp;apos;开发部&amp;apos;),(&amp;apos;市场部&amp;">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>MySQL完整性约束条件 | Tassel</title>
+  <title>MySQL多表查询&事务&权限管理 | Tassel</title>
   
 
 
@@ -312,7 +312,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">MySQL完整性约束条件</h2>
+          <h2 class="post-title" itemprop="name headline">MySQL多表查询&事务&权限管理</h2>
         
 
         <div class="post-meta">
@@ -364,7 +364,7 @@
 
           
           
-             <span id="/2019/09/06/MySQL多表查询&事务&权限管理/" class="leancloud_visitors" data-flag-title="MySQL完整性约束条件">
+             <span id="/2019/09/06/MySQL多表查询&事务&权限管理/" class="leancloud_visitors" data-flag-title="MySQL多表查询&事务&权限管理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -545,17 +545,17 @@
 
 </li>
 </ol>
-<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><h3 id="事务的基本介绍"><a href="#事务的基本介绍" class="headerlink" title="事务的基本介绍"></a>事务的基本介绍</h3><h4 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h4><ul>
+<h1 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h1><h2 id="事务的基本介绍"><a href="#事务的基本介绍" class="headerlink" title="事务的基本介绍"></a>事务的基本介绍</h2><h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><ul>
 <li>如果一个包含多个步骤的业务操作，被事务管理，那么这些操作要么同时成功，要么同时失败。</li>
 </ul>
-<h4 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h4><ol>
+<h3 id="操作："><a href="#操作：" class="headerlink" title="操作："></a>操作：</h3><ol>
 <li>开启事务： start transaction;</li>
 <li>回滚：rollback;</li>
 <li>提交：commit;</li>
 </ol>
-<h4 id="例子：-1"><a href="#例子：-1" class="headerlink" title="例子："></a>例子：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE account (</span><br><span class="line">	id INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	NAME VARCHAR(10),</span><br><span class="line">	balance DOUBLE</span><br><span class="line">);</span><br><span class="line">-- 添加数据</span><br><span class="line">INSERT INTO account (NAME, balance) VALUES (&apos;zhangsan&apos;, 1000), (&apos;lisi&apos;, 1000);</span><br><span class="line">SELECT * FROM account;</span><br><span class="line">UPDATE account SET balance = 1000;</span><br><span class="line"></span><br><span class="line">-- 张三给李四转账 500 元</span><br><span class="line">-- 0. 开启事务</span><br><span class="line">START TRANSACTION;</span><br><span class="line"></span><br><span class="line">-- 1. 张三账户 -500</span><br><span class="line">UPDATE account SET balance = balance - 500 WHERE NAME = &apos;zhangsan&apos;;</span><br><span class="line"></span><br><span class="line">-- 2. 李四账户 +500</span><br><span class="line">-- 出错了...</span><br><span class="line">UPDATE account SET balance = balance + 500 WHERE NAME = &apos;lisi&apos;;</span><br><span class="line"></span><br><span class="line">-- 发现执行没有问题，提交事务</span><br><span class="line">COMMIT;</span><br><span class="line"></span><br><span class="line">-- 发现出问题了，回滚事务</span><br><span class="line">ROLLBACK;</span><br></pre></td></tr></table></figure>
+<h3 id="例子：-1"><a href="#例子：-1" class="headerlink" title="例子："></a>例子：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE account (</span><br><span class="line">	id INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	NAME VARCHAR(10),</span><br><span class="line">	balance DOUBLE</span><br><span class="line">);</span><br><span class="line">-- 添加数据</span><br><span class="line">INSERT INTO account (NAME, balance) VALUES (&apos;zhangsan&apos;, 1000), (&apos;lisi&apos;, 1000);</span><br><span class="line">SELECT * FROM account;</span><br><span class="line">UPDATE account SET balance = 1000;</span><br><span class="line"></span><br><span class="line">-- 张三给李四转账 500 元</span><br><span class="line">-- 0. 开启事务</span><br><span class="line">START TRANSACTION;</span><br><span class="line"></span><br><span class="line">-- 1. 张三账户 -500</span><br><span class="line">UPDATE account SET balance = balance - 500 WHERE NAME = &apos;zhangsan&apos;;</span><br><span class="line"></span><br><span class="line">-- 2. 李四账户 +500</span><br><span class="line">-- 出错了...</span><br><span class="line">UPDATE account SET balance = balance + 500 WHERE NAME = &apos;lisi&apos;;</span><br><span class="line"></span><br><span class="line">-- 发现执行没有问题，提交事务</span><br><span class="line">COMMIT;</span><br><span class="line"></span><br><span class="line">-- 发现出问题了，回滚事务</span><br><span class="line">ROLLBACK;</span><br></pre></td></tr></table></figure>
 
-<h4 id="MySQL数据库中事务默认自动提交"><a href="#MySQL数据库中事务默认自动提交" class="headerlink" title="MySQL数据库中事务默认自动提交"></a>MySQL数据库中事务默认自动提交</h4><ul>
+<h3 id="MySQL数据库中事务默认自动提交"><a href="#MySQL数据库中事务默认自动提交" class="headerlink" title="MySQL数据库中事务默认自动提交"></a>MySQL数据库中事务默认自动提交</h3><ul>
 <li>事务提交的两种方式：<ul>
 <li>自动提交：<ul>
 <li>mysql就是自动提交的</li>
@@ -575,13 +575,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="事务的四大特征："><a href="#事务的四大特征：" class="headerlink" title="事务的四大特征："></a>事务的四大特征：</h3><ol>
+<h2 id="事务的四大特征："><a href="#事务的四大特征：" class="headerlink" title="事务的四大特征："></a>事务的四大特征：</h2><ol>
 <li>原子性：是不可分割的最小操作单位，要么同时成功，要么同时失败。</li>
 <li>持久性：当事务提交或回滚后，数据库会持久化的保存数据。</li>
 <li>隔离性：多个事务之间。相互独立。</li>
 <li>一致性：事务操作前后，数据总量不变</li>
 </ol>
-<h3 id="事务的隔离级别（了解）"><a href="#事务的隔离级别（了解）" class="headerlink" title="事务的隔离级别（了解）"></a>事务的隔离级别（了解）</h3><ul>
+<h2 id="事务的隔离级别（了解）"><a href="#事务的隔离级别（了解）" class="headerlink" title="事务的隔离级别（了解）"></a>事务的隔离级别（了解）</h2><ul>
 <li><p>概念：多个事务之间隔离的，相互独立的。但是如果多个事务操作同一批数据，则会引发一些问题，设置不同的隔离级别就可以解决这些问题。</p>
 </li>
 <li><p>存在问题：</p>
@@ -626,13 +626,13 @@
 
 </li>
 </ul>
-<h2 id="DCL："><a href="#DCL：" class="headerlink" title="DCL："></a>DCL：</h2><h4 id="SQL分类："><a href="#SQL分类：" class="headerlink" title="SQL分类："></a>SQL分类：</h4><ol>
+<h1 id="DCL："><a href="#DCL：" class="headerlink" title="DCL："></a>DCL：</h1><h2 id="SQL分类："><a href="#SQL分类：" class="headerlink" title="SQL分类："></a>SQL分类：</h2><ol>
 <li>DDL：操作数据库和表</li>
 <li>DML：增删改表中数据</li>
 <li>DQL：查询表中数据</li>
 <li>DCL：管理用户，授权</li>
 </ol>
-<h4 id="DCL：管理用户，授权"><a href="#DCL：管理用户，授权" class="headerlink" title="DCL：管理用户，授权"></a>DCL：管理用户，授权</h4><ol>
+<h2 id="DCL：管理用户，授权"><a href="#DCL：管理用户，授权" class="headerlink" title="DCL：管理用户，授权"></a>DCL：管理用户，授权</h2><ol>
 <li><p>管理用户</p>
 <ol>
 <li><p>添加用户：</p>
@@ -650,7 +650,7 @@
 </ol>
 </li>
 </ol>
-<h4 id="mysql中忘记了root用户的密码？"><a href="#mysql中忘记了root用户的密码？" class="headerlink" title="mysql中忘记了root用户的密码？"></a>mysql中忘记了root用户的密码？</h4><ol>
+<h3 id="mysql中忘记了root用户的密码？"><a href="#mysql中忘记了root用户的密码？" class="headerlink" title="mysql中忘记了root用户的密码？"></a>mysql中忘记了root用户的密码？</h3><ol>
 <li>cmd – &gt; net stop mysql 停止mysql服务<pre><code>1. 需要管理员运行该cmd</code></pre></li>
 <li>使用无验证方式启动mysql服务： mysqld –skip-grant-tables<ol start="3">
 <li>打开新的cmd窗口,直接输入mysql命令，敲回车。就可以登录成功</li>
@@ -663,12 +663,12 @@
 </ol>
 </li>
 </ol>
-<h4 id="查询用户："><a href="#查询用户：" class="headerlink" title="查询用户："></a>查询用户：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 1. 切换到mysql数据库</span><br><span class="line">USE myql;</span><br><span class="line"></span><br><span class="line">-- 2. 查询user表</span><br><span class="line">SELECT * FROM USER;</span><br></pre></td></tr></table></figure>
+<h3 id="查询用户："><a href="#查询用户：" class="headerlink" title="查询用户："></a>查询用户：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 1. 切换到mysql数据库</span><br><span class="line">USE myql;</span><br><span class="line"></span><br><span class="line">-- 2. 查询user表</span><br><span class="line">SELECT * FROM USER;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>通配符： % 表示可以在任意主机使用用户登录数据库</li>
 </ul>
-<h4 id="权限管理："><a href="#权限管理：" class="headerlink" title="权限管理："></a>权限管理：</h4><ol>
+<h3 id="权限管理："><a href="#权限管理：" class="headerlink" title="权限管理："></a>权限管理：</h3><ol>
 <li><p>查询权限：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 查询权限</span><br><span class="line">SHOW GRANTS FOR &apos;用户名&apos;@&apos;主机名&apos;;</span><br><span class="line">SHOW GRANTS FOR &apos;lisi&apos;@&apos;%&apos;;</span><br></pre></td></tr></table></figure>
 </li>
@@ -878,7 +878,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多表查询："><span class="nav-number">1.</span> <span class="nav-text">多表查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例子："><span class="nav-number">1.1.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#笛卡尔积："><span class="nav-number">1.2.</span> <span class="nav-text">笛卡尔积：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表查询的分类："><span class="nav-number">1.3.</span> <span class="nav-text">多表查询的分类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内连接查询："><span class="nav-number">1.3.1.</span> <span class="nav-text">内连接查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式内连接：使用where条件消除无用数据"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">隐式内连接：使用where条件消除无用数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显式内连接："><span class="nav-number">1.3.1.2.</span> <span class="nav-text">显式内连接：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外链接查询："><span class="nav-number">1.3.2.</span> <span class="nav-text">外链接查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#左外连接："><span class="nav-number">1.3.2.1.</span> <span class="nav-text">左外连接：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右外连接："><span class="nav-number">1.3.2.2.</span> <span class="nav-text">右外连接：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子查询："><span class="nav-number">1.3.3.</span> <span class="nav-text">子查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子查询不同情况"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">子查询不同情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表查询练习"><span class="nav-number">1.3.4.</span> <span class="nav-text">多表查询练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建表"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">建表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需求及sql"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">需求及sql</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.4.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的基本介绍"><span class="nav-number">1.4.1.</span> <span class="nav-text">事务的基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念："><span class="nav-number">1.4.1.1.</span> <span class="nav-text">概念：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作："><span class="nav-number">1.4.1.2.</span> <span class="nav-text">操作：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#例子：-1"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL数据库中事务默认自动提交"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">MySQL数据库中事务默认自动提交</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的四大特征："><span class="nav-number">1.4.2.</span> <span class="nav-text">事务的四大特征：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的隔离级别（了解）"><span class="nav-number">1.4.3.</span> <span class="nav-text">事务的隔离级别（了解）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DCL："><span class="nav-number">1.5.</span> <span class="nav-text">DCL：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SQL分类："><span class="nav-number">1.5.0.1.</span> <span class="nav-text">SQL分类：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DCL：管理用户，授权"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">DCL：管理用户，授权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql中忘记了root用户的密码？"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">mysql中忘记了root用户的密码？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询用户："><span class="nav-number">1.5.0.4.</span> <span class="nav-text">查询用户：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#权限管理："><span class="nav-number">1.5.0.5.</span> <span class="nav-text">权限管理：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多表查询："><span class="nav-number">1.</span> <span class="nav-text">多表查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例子："><span class="nav-number">1.1.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#笛卡尔积："><span class="nav-number">1.2.</span> <span class="nav-text">笛卡尔积：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多表查询的分类："><span class="nav-number">1.3.</span> <span class="nav-text">多表查询的分类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内连接查询："><span class="nav-number">1.3.1.</span> <span class="nav-text">内连接查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#隐式内连接：使用where条件消除无用数据"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">隐式内连接：使用where条件消除无用数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显式内连接："><span class="nav-number">1.3.1.2.</span> <span class="nav-text">显式内连接：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外链接查询："><span class="nav-number">1.3.2.</span> <span class="nav-text">外链接查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#左外连接："><span class="nav-number">1.3.2.1.</span> <span class="nav-text">左外连接：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#右外连接："><span class="nav-number">1.3.2.2.</span> <span class="nav-text">右外连接：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子查询："><span class="nav-number">1.3.3.</span> <span class="nav-text">子查询：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#子查询不同情况"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">子查询不同情况</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多表查询练习"><span class="nav-number">1.3.4.</span> <span class="nav-text">多表查询练习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建表"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">建表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需求及sql"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">需求及sql</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事务"><span class="nav-number">2.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的基本介绍"><span class="nav-number">2.1.</span> <span class="nav-text">事务的基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念："><span class="nav-number">2.1.1.</span> <span class="nav-text">概念：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作："><span class="nav-number">2.1.2.</span> <span class="nav-text">操作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子：-1"><span class="nav-number">2.1.3.</span> <span class="nav-text">例子：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL数据库中事务默认自动提交"><span class="nav-number">2.1.4.</span> <span class="nav-text">MySQL数据库中事务默认自动提交</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的四大特征："><span class="nav-number">2.2.</span> <span class="nav-text">事务的四大特征：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的隔离级别（了解）"><span class="nav-number">2.3.</span> <span class="nav-text">事务的隔离级别（了解）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DCL："><span class="nav-number">3.</span> <span class="nav-text">DCL：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL分类："><span class="nav-number">3.1.</span> <span class="nav-text">SQL分类：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DCL：管理用户，授权"><span class="nav-number">3.2.</span> <span class="nav-text">DCL：管理用户，授权</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql中忘记了root用户的密码？"><span class="nav-number">3.2.1.</span> <span class="nav-text">mysql中忘记了root用户的密码？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询用户："><span class="nav-number">3.2.2.</span> <span class="nav-text">查询用户：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理："><span class="nav-number">3.2.3.</span> <span class="nav-text">权限管理：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
