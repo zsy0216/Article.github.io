@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。     前言#{}与${}区别 #{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；  #{} 只是表示占位，与参数的名字无关">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T00:28:37.540Z">
+<meta property="og:updated_time" content="2019-09-10T01:17:08.934Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis中的Mapper.xml映射文件sql查询接收多个参数">
 <meta name="twitter:description" content="​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。     前言#{}与${}区别 #{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；  #{} 只是表示占位，与参数的名字无关">
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  896
+                  895
                 </span>
               
 
@@ -432,7 +432,7 @@
 <ul>
 <li>sql语句中某个参数进行占位的时候用#{}</li>
 </ul>
-<h2 id="接收多个参数"><a href="#接收多个参数" class="headerlink" title="接收多个参数"></a>接收多个参数</h2><p>​    遇到这个问题是在昨天实现分页的时候接收参数时遇到了错误，最后用第一种方法解决，但是怀着路漫漫其修远兮的态度，吾必将上下而求索其他用法，所以在查询了网上很多教程和mybatis官方文档，总结出以下四种常用用法；</p>
+<h2 id="接收多个参数"><a href="#接收多个参数" class="headerlink" title="接收多个参数"></a>接收多个参数</h2><p>​    遇到这个问题是在昨天实现分页的时候接收参数时遇到了错误，最后用第一种方法解决，但是怀着路漫漫其修远兮的态度，吾必将上下而求索其他用法，所以在查询了网上很多教程和mybatis官方文档，总结出以下四种常用用法；<br>具体分页参考：<br><a href="https://blog.csdn.net/Ep_Little_prince/article/details/100687883" target="_blank" rel="noopener">手动实现分页</a> 或<br><a href="https://zsy0216.github.io/2019/09/10/手动实现SSM分页逻辑/" target="_blank" rel="noopener">手动分页</a></p>
 <ul>
 <li>使用arg0，arg1或使用param1，param2接收（arg索引从0开始，param索引从1开始）；</li>
 <li>多个参数封装成对象；</li>
@@ -441,10 +441,6 @@
 </ul>
 <p>下面分别介绍</p>
 <p>看传来的参数：</p>
-<ul>
-<li>pageNo是页码，即第几页；</li>
-<li>pageSize是每一页有多少数据；</li>
-</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerDao</span> </span>&#123;</span><br><span class="line">     <span class="function">List&lt;Customer&gt; <span class="title">findAllPageSql</span><span class="params">(Integer pageNo,Integer pageSize)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="第一种方法：使用arg或param"><a href="#第一种方法：使用arg或param" class="headerlink" title="第一种方法：使用arg或param"></a>第一种方法：使用arg或param</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span><br><span class="line">    &lt;select id=<span class="string">"findAllPageSql"</span> parameterType=<span class="string">"java.lang.Integer"</span> resultType=<span class="string">"com.vue.entity.Customer"</span>&gt;</span><br><span class="line">        SELECT * FROM t_customer LIMIT #&#123;param1&#125;,#&#123;param2&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
