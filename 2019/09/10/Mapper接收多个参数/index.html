@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Tassel">
+  <meta name="keywords" content="mybatis,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="Welcome">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tassel">
-<meta property="og:url" content="https://zsy.xyz/categories/Review/index.html">
+<meta name="description" content="​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。     前言#{}与${}区别 #{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；  #{} 只是表示占位，与参数的名字无关">
+<meta name="keywords" content="mybatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis中的Mapper.xml映射文件sql查询接收多个参数">
+<meta property="og:url" content="https://zsy.xyz/2019/09/10/Mapper接收多个参数/index.html">
 <meta property="og:site_name" content="Tassel">
-<meta property="og:description" content="Welcome">
+<meta property="og:description" content="​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。     前言#{}与${}区别 #{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；  #{} 只是表示占位，与参数的名字无关">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-10T00:28:37.540Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tassel">
-<meta name="twitter:description" content="Welcome">
+<meta name="twitter:title" content="Mybatis中的Mapper.xml映射文件sql查询接收多个参数">
+<meta name="twitter:description" content="​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。     前言#{}与${}区别 #{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；  #{} 只是表示占位，与参数的名字无关">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zsy.xyz/categories/Review/">
+  <link rel="canonical" href="https://zsy.xyz/2019/09/10/Mapper接收多个参数/">
 
 
 
 
 
-  <title>分类: Review | Tassel</title>
+  <title>Mybatis中的Mapper.xml映射文件sql查询接收多个参数 | Tassel</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -279,131 +281,270 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>Review<small>分类</small>
-        </h2>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zsy.xyz/2019/09/10/Mapper接收多个参数/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tassel">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tassel">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/06/19/OOA-D/" itemprop="url">
-              
-                <span itemprop="name">面向对象分析与设计</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Mybatis中的Mapper.xml映射文件sql查询接收多个参数</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-19T14:50:42+08:00" content="2019-06-19">
-          06-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-10T08:25:40+08:00">
+                2019-09-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JAVA/" itemprop="url" rel="index">
+                    <span itemprop="name">JAVA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/09/10/Mapper接收多个参数/" class="leancloud_visitors" data-flag-title="Mybatis中的Mapper.xml映射文件sql查询接收多个参数">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  896
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/17/mao-gai/" itemprop="url">
-              
-                <span itemprop="name">毛泽东思想和中国特色社会主义理论体系概论</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-17T14:19:27+08:00" content="2019-06-17">
-          06-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <p>​    我们都知道，在Mybatis中的Mapper.xml映射文件可以定制动态SQL，在dao层定义的接口中定义的参数传到xml文件中之后，在查询之前mybatis会对其进行动态解析,通常使用#{}接收，下面介绍几种比较常用的用法。    </p>
+<h2 id="前言-与-区别"><a href="#前言-与-区别" class="headerlink" title="前言#{}与${}区别"></a>前言#{}与${}区别</h2><ul>
+<li><p>#{} 在SQL动态解析之后，编译将#{}替换为占位符？去替换参数，可以防止sql注入；</p>
+</li>
+<li><p>#{} 只是表示占位，与参数的名字无关，如果只有一个参数会自动对应，下面会介绍多个参数的问题；</p>
+</li>
+<li><p>${} 是进行字符串拼接，直接取出参数值，放到sql语句中；</p>
+</li>
+<li><p>使用注意点，当表名作为变量时，必须使用${}获取参数作为表名进行查询，否则会出现语法错误；</p>
+</li>
+</ul>
+<p>总结：</p>
+<ul>
+<li>sql语句动态生成的时候，使用${}</li>
+</ul>
+<ul>
+<li>sql语句中某个参数进行占位的时候用#{}</li>
+</ul>
+<h2 id="接收多个参数"><a href="#接收多个参数" class="headerlink" title="接收多个参数"></a>接收多个参数</h2><p>​    遇到这个问题是在昨天实现分页的时候接收参数时遇到了错误，最后用第一种方法解决，但是怀着路漫漫其修远兮的态度，吾必将上下而求索其他用法，所以在查询了网上很多教程和mybatis官方文档，总结出以下四种常用用法；</p>
+<ul>
+<li>使用arg0，arg1或使用param1，param2接收（arg索引从0开始，param索引从1开始）；</li>
+<li>多个参数封装成对象；</li>
+<li>多个参数封装成Map集合；</li>
+<li>使用@param绑定参数；</li>
+</ul>
+<p>下面分别介绍</p>
+<p>看传来的参数：</p>
+<ul>
+<li>pageNo是页码，即第几页；</li>
+<li>pageSize是每一页有多少数据；</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerDao</span> </span>&#123;</span><br><span class="line">     <span class="function">List&lt;Customer&gt; <span class="title">findAllPageSql</span><span class="params">(Integer pageNo,Integer pageSize)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<h3 id="第一种方法：使用arg或param"><a href="#第一种方法：使用arg或param" class="headerlink" title="第一种方法：使用arg或param"></a>第一种方法：使用arg或param</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span><br><span class="line">    &lt;select id=<span class="string">"findAllPageSql"</span> parameterType=<span class="string">"java.lang.Integer"</span> resultType=<span class="string">"com.vue.entity.Customer"</span>&gt;</span><br><span class="line">        SELECT * FROM t_customer LIMIT #&#123;param1&#125;,#&#123;param2&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/17/os/" itemprop="url">
-              
-                <span itemprop="name">os</span>
-              
-            </a>
-        
-      </h3>
+<p>或</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;mapper namespace=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span><br><span class="line">    &lt;select id=<span class="string">"findAllPageSql"</span> parameterType=<span class="string">"java.lang.Integer"</span> resultType=<span class="string">"com.vue.entity.Customer"</span>&gt;</span><br><span class="line">        SELECT * FROM t_customer LIMIT #&#123;arg0&#125;,#&#123;arg1&#125;</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-17T11:09:48+08:00" content="2019-06-17">
-          06-17
-        </time>
-      </div>
+<h3 id="第二种方法：封装成对象"><a href="#第二种方法：封装成对象" class="headerlink" title="第二种方法：封装成对象"></a>第二种方法：封装成对象</h3><p>Page.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Page</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Integer pageNo;</span><br><span class="line">    <span class="keyword">private</span> Integer pageSize;</span><br><span class="line">	<span class="comment">//getter,setter略</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<p>传参：</p>
+<p>控制层封装前台传来的page信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line">   <span class="meta">@GetMapping</span>(<span class="string">"/allClass"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">findAllPageClass</span><span class="params">(@RequestParam(required = <span class="keyword">true</span>,defaultValue = <span class="string">"1"</span>)</span> Integer pageNo,</span></span><br><span class="line"><span class="function">                                @<span class="title">RequestParam</span><span class="params">(required = <span class="keyword">false</span>,defaultValue = <span class="string">"5"</span>)</span> Integer pageSize) </span>&#123;</span><br><span class="line">       Page page = <span class="keyword">new</span> Page();</span><br><span class="line">       page.setPageNo(pageNo-<span class="number">1</span>);</span><br><span class="line">       page.setPageSize(pageSize);</span><br><span class="line">       <span class="keyword">return</span> customerService.findAllPageClass(page);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
+<p>service层：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerService</span></span>&#123;   </span><br><span class="line">	<span class="function">String <span class="title">findAllPageClass</span><span class="params">(Page page)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
-        
+<p>持久层传参：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerDao</span> </span>&#123;</span><br><span class="line">     <span class="function">List&lt;Customer&gt; <span class="title">findAllPageClass</span><span class="params">(Page page)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>mapper.xml映射文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findAllPageClass"</span> <span class="attr">resultType</span>=<span class="string">"com.vue.entity.Customer"</span> <span class="attr">parameterType</span>=<span class="string">"com.vue.util.Page"</span>&gt;</span></span><br><span class="line">       SELECT * FROM t_customer LIMIT #&#123;pageNo&#125;,#&#123;pageSize&#125;</span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/13/computer-internet/" itemprop="url">
-              
-                <span itemprop="name">计算机网络</span>
-              
-            </a>
-        
-      </h3>
+<h3 id="第三种方法：封装成Map集合"><a href="#第三种方法：封装成Map集合" class="headerlink" title="第三种方法：封装成Map集合"></a>第三种方法：封装成Map集合</h3><p>传参：</p>
+<p>控制层封装前台传来的page信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line">   <span class="meta">@GetMapping</span>(<span class="string">"/allMap"</span>)</span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">findAllPageMap</span><span class="params">(@RequestParam(required = <span class="keyword">true</span>,defaultValue = <span class="string">"1"</span>)</span> Integer pageNo,</span></span><br><span class="line"><span class="function">                                  @<span class="title">RequestParam</span><span class="params">(required = <span class="keyword">false</span>,defaultValue = <span class="string">"5"</span>)</span> Integer pageSize) </span>&#123;</span><br><span class="line">       Map&lt;String,Integer&gt; pageMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">       pageMap.put(<span class="string">"pageNo"</span>,pageNo-<span class="number">1</span>);</span><br><span class="line">       pageMap.put(<span class="string">"pageSize"</span>,pageSize);</span><br><span class="line">       <span class="keyword">return</span> customerService.findAllPageMap(pageMap);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-13T10:17:46+08:00" content="2019-06-13">
-          06-13
-        </time>
-      </div>
+<p>service层：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerService</span></span>&#123;   </span><br><span class="line">	<span class="function">String <span class="title">findAllPageMap</span><span class="params">(Map&lt;String, Integer&gt; pageMap)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<p>持久层传参：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerDao</span> </span>&#123;</span><br><span class="line">     <span class="function">List&lt;Customer&gt; <span class="title">findAllPageMap</span><span class="params">(Map&lt;String, Integer&gt; pageMap)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mapper.xml映射文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findAllPageMap"</span> <span class="attr">parameterType</span>=<span class="string">"java.util.Map"</span> <span class="attr">resultType</span>=<span class="string">"com.vue.entity.Customer"</span>&gt;</span></span><br><span class="line">       SELECT * FROM t_customer LIMIT #&#123;pageNo&#125;,#&#123;pageSize&#125;</span><br><span class="line">   <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第四种方法：使用-Param绑定参数"><a href="#第四种方法：使用-Param绑定参数" class="headerlink" title="第四种方法：使用@Param绑定参数"></a>第四种方法：使用@Param绑定参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CustomerDao</span> </span>&#123;</span><br><span class="line">	<span class="function">List&lt;Customer&gt; <span class="title">findAllPageSql</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        @Param(value = <span class="string">"pageNo"</span>)</span> Integer pageNo,</span></span><br><span class="line"><span class="function">        @<span class="title">Param</span><span class="params">(value = <span class="string">"pageSize"</span>)</span> Integer pageSize)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>mapper.xml映射文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.vue.dao.CustomerDao"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findAllPageSql"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.Integer"</span> <span class="attr">resultType</span>=<span class="string">"com.vue.entity.Customer"</span>&gt;</span></span><br><span class="line">        SELECT * FROM t_customer LIMIT #&#123;pageNo&#125;,#&#123;pageSize&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mybatis/" rel="tag"># mybatis</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/07/MySQL完整性约束条件/" rel="next" title="MySQL完整性约束条件">
+                <i class="fa fa-chevron-left"></i> MySQL完整性约束条件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -411,6 +552,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -433,8 +578,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -518,6 +672,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言-与-区别"><span class="nav-number">1.</span> <span class="nav-text">前言#{}与${}区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接收多个参数"><span class="nav-number">2.</span> <span class="nav-text">接收多个参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一种方法：使用arg或param"><span class="nav-number">2.1.</span> <span class="nav-text">第一种方法：使用arg或param</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二种方法：封装成对象"><span class="nav-number">2.2.</span> <span class="nav-text">第二种方法：封装成对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三种方法：封装成Map集合"><span class="nav-number">2.3.</span> <span class="nav-text">第三种方法：封装成Map集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四种方法：使用-Param绑定参数"><span class="nav-number">2.4.</span> <span class="nav-text">第四种方法：使用@Param绑定参数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -661,6 +831,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
