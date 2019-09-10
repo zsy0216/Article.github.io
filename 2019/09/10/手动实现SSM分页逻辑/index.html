@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Tassel">
 <meta property="og:description" content="第一种方法：查询出所有数据再分页分析： 分页时，需要获得前台传来的两个参数，分别为pageNo(第几页数据)，pageSize(每页的条数); 根据这两个参数来计算出前端需要的数据是查出数据list中的开始索引和结束索引； 利用List 的subList方法来分割查询出来的所有数据并返回；  实现过程1. 获取参数这里返回的是json数据接口，实现方法在service层 1234567@Respo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-10T01:50:05.731Z">
+<meta property="og:updated_time" content="2019-09-10T02:00:08.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手动实现SSM分页逻辑">
 <meta name="twitter:description" content="第一种方法：查询出所有数据再分页分析： 分页时，需要获得前台传来的两个参数，分别为pageNo(第几页数据)，pageSize(每页的条数); 根据这两个参数来计算出前端需要的数据是查出数据list中的开始索引和结束索引； 利用List 的subList方法来分割查询出来的所有数据并返回；  实现过程1. 获取参数这里返回的是json数据接口，实现方法在service层 1234567@Respo">
@@ -389,7 +389,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.5k
                 </span>
               
 
@@ -468,8 +468,17 @@
 <p><a href="https://blog.csdn.net/Ep_Little_prince/article/details/100571739" target="_blank" rel="noopener">【MySQL】条件查询之排序聚合分组分页查询</a></p>
 </li>
 </ul>
-<h2 id="实现过程-1"><a href="#实现过程-1" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="1-获取参数-1"><a href="#1-获取参数-1" class="headerlink" title="1. 获取参数"></a>1. 获取参数</h3><ul>
-<li>pageNo-1的原因：使用SQL分页时，查询语句中的开始的索引从0开始，第一页对应的值为0；</li>
+<h2 id="实现过程-1"><a href="#实现过程-1" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="1-获取参数-1"><a href="#1-获取参数-1" class="headerlink" title="1. 获取参数"></a>1. 获取参数</h3><p><strong>分析</strong></p>
+<ul>
+<li>参数中，pageNo是前端传来的页码，即第几页；pageSize是每一页要显示的条数，默认为5；</li>
+<li>使用SQL分页时，查询语句中需要的参数为显示数据在数据库中的索引和每页显示的数据条目数；<ul>
+<li>计算索引的公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数；</li>
+</ul>
+</li>
+<li>在这里还要判断一下前端传来的页码数是否超出总数据最大的分页数，如果超出则显示最大页数；<ul>
+<li>最大页数计算：<code>int maxPage =(int) Math.ceil(count/pageSize.doubleValue());</code></li>
+</ul>
+</li>
 </ul>
 <p>CustomerController.java</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomerController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    CustomerService customerService；</span><br><span class="line">    </span><br><span class="line">	<span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/allSql"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">findAllPageSql</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">        @RequestParam(required = <span class="keyword">true</span>,defaultValue = <span class="string">"1"</span>)</span> Integer pageNo,</span></span><br><span class="line"><span class="function">        @<span class="title">RequestParam</span><span class="params">(required = <span class="keyword">false</span>,defaultValue = <span class="string">"5"</span>)</span> Integer pageSize) </span>&#123;</span><br><span class="line">         <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * pageSize 是每页显示的条数</span></span><br><span class="line"><span class="comment">         * pageNo 是页码，sql分页传递的第一个参数是开始的索引；</span></span><br><span class="line"><span class="comment">         * 计算公式：开始的索引 = （当前的页码 - 1） * 每页显示的条数</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//数据总数</span></span><br><span class="line">        <span class="keyword">int</span> count = customerService.count();</span><br><span class="line">        <span class="comment">//计算最大页码</span></span><br><span class="line">        <span class="keyword">int</span> maxPage =(<span class="keyword">int</span>) Math.ceil(count/pageSize.doubleValue());</span><br><span class="line">        <span class="comment">//当前页码超出最大页码返回最大页码值：</span></span><br><span class="line">        pageNo = pageNo&gt;maxPage?maxPage:pageNo;</span><br><span class="line">        <span class="comment">//分页开始的索引值</span></span><br><span class="line">        <span class="keyword">int</span> index = (pageNo - <span class="number">1</span>) * pageSize &gt; count ? count : (pageNo - <span class="number">1</span>) * pageSize;</span><br><span class="line">        <span class="keyword">return</span> customerService.findAllPageSql(index, pageSize);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -740,7 +749,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">61.5k</span>
+    <span title="Site words total count">61.6k</span>
   
 </div>
 
