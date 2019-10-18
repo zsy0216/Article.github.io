@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zsy.xyz/2019/10/18/Redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2019-10-18T09:26:47.072Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zsy.xyz/2019/10/18/Zookeeper%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2019-10-18T09:25:38.351Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zsy.xyz/2019/10/18/dubbo-zookeeper%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</loc>
+    
+    <lastmod>2019-10-18T09:24:09.132Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.zsy.xyz/2019/10/01/Vue-cli-CROS/</loc>
     
     <lastmod>2019-10-01T11:37:22.216Z</lastmod>
