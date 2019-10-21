@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.zsy.xyz/2019/10/21/jsp/</loc>
+    <lastmod>2019-10-21</lastmod>
+  </url>  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/servlet/</loc>
+    <lastmod>2019-10-21</lastmod>
+  </url>  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/JavaSE/</loc>
+    <lastmod>2019-10-21</lastmod>
+  </url>  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    <lastmod>2019-10-21</lastmod>
+  </url>  <url>
     <loc>https://www.zsy.xyz/2019/10/18/Redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2019-10-18</lastmod>
   </url>  <url>

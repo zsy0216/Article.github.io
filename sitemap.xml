@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.zsy.xyz/2019/10/21/jsp/</loc>
+    
+    <lastmod>2019-10-21T05:49:36.385Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/servlet/</loc>
+    
+    <lastmod>2019-10-21T05:49:30.004Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/JavaSE/</loc>
+    
+    <lastmod>2019-10-21T05:47:54.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.zsy.xyz/2019/10/21/Java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
+    
+    <lastmod>2019-10-21T05:47:42.882Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.zsy.xyz/2019/10/18/Redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2019-10-18T09:26:47.072Z</lastmod>
